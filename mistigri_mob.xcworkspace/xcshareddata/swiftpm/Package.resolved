@@ -1,0 +1,15 @@
+{
+  "originHash" : "7f697a6c7898638381c2a7ef73b850d459490ad62db752ec916e22be6b6a2e07",
+  "pins" : [
+    {
+      "identity" : "coordinators",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ivkuznetsov/Coordinators.git",
+      "state" : {
+        "revision" : "69d74cbbb7572005a38e839ce33d02dc6f677ec2",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

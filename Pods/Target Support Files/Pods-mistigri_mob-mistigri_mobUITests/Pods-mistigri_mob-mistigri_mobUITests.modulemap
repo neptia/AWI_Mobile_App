@@ -1,0 +1,6 @@
+framework module Pods_mistigri_mob_mistigri_mobUITests {
+  umbrella header "Pods-mistigri_mob-mistigri_mobUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

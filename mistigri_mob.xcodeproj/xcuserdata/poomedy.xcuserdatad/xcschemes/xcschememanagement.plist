@@ -7,7 +7,25 @@
 		<key>mistigri_mob.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B059AF7A2D7CA900003930C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B059AF8A2D7CA901003930C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B059AF942D7CA901003930C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

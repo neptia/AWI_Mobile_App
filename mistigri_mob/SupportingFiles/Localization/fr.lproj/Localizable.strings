@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  mistigri_mob
+
+  Created by Poomedy Rungen on 08/03/2025.
+  
+*/
+
+"ContentView.WelcomeMessage" = "Bonjour, Monde!";

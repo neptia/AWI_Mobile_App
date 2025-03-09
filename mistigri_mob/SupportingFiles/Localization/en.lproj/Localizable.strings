@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  mistigri_mob
+
+  Created by Poomedy Rungen on 08/03/2025.
+  
+*/
+
+"Login.EmailField.Title" = "Email";
+"Login.PasswordField.Title" = "Password";
+"Login.LoginButton.Title" = "Login";

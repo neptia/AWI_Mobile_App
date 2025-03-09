@@ -1,0 +1,10 @@
+#
+//  .swiftlint.yml
+//  mistigri_mob
+//
+//  Created by Poomedy Rungen on 08/03/2025.
+//
+
+disabled_rules:
+  - trailing_whitespace
+
