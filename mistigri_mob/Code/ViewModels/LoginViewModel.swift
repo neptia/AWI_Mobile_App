@@ -27,7 +27,7 @@ class LoginViewModel: ObservableObject {
             )
         ).call(onSuccess: { [self] _ in
             // Login succesful go to homepage
-            router.navigateToStoreHome()
+            router.navigateToDashboard()
         }, onError: { errorMessage in
             // Show error alert on login failure
             alertManager.showAlertMessage(message: errorMessage)

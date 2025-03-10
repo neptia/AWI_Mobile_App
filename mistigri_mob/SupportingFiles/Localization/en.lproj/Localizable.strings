@@ -10,3 +10,5 @@
 "Login.PasswordField.Title" = "Password";
 "Login.LoginButton.Title" = "Login";
 "Login.Text.Title" = "Login";
+"Popular.Text.Title" = "Popular Right Now!";
+"New.Text.Title" = "New In !";

@@ -9,7 +9,18 @@ import SwiftUI
 
 struct StoreHomeScreen: View {
     var body: some View {
-        GameSearchView()
+        NavigationStack {
+            VStack {
+                List {
+                    ImageSliderView()
+                        .frame(height: 200)
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
+                PopularGamesView()
+                NewGamesView()
+            }
+
+        }
     }
 }
 

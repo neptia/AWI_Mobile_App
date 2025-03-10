@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var alertManager = AlertManager()
+    @StateObject var coordinator = TabsCoordinator()
 
     var body: some View {
-        LoginScreen(router: Router())
-            .environmentObject(alertManager)
+        coordinator.rootView
     }
 }
 

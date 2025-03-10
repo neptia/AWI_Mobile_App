@@ -79,8 +79,10 @@ struct LoginScreen: View {
                     .padding(.bottom, 80)
                     .background(Color.CFFF3E2)
                     .navigationDestination(
-                        isPresented: $router.navigateToStoreHomeScreen ) {
-                            StoreHomeScreen().padding().navigationBarBackButtonHidden(true)
+                        isPresented: $router.navigateToDashboardScreen ) {
+                            DashboardScreen()
+                                .toolbar(.hidden, for: .tabBar)
+                                .padding().navigationBarBackButtonHidden(true)
                         }
                 }
         }

@@ -8,9 +8,11 @@
 import SwiftUI
 
 class Router: ObservableObject {
-    @Published var navigateToStoreHomeScreen = false
+    @Published var navigateToDashboardScreen = false
+    func navigateToDashboard() {
+        DispatchQueue.main.async {
+            self.navigateToDashboardScreen = true
+        }
 
-    func navigateToStoreHome() {
-        self.navigateToStoreHomeScreen = true
     }
 }

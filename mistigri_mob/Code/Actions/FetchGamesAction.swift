@@ -19,7 +19,7 @@ struct FetchGamesAction {
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         print(request)
-        let task = URLSession.shared.dataTask(with: request){ data, response, error in
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 print("Error while fetching data:", error)
                 onError("No connection. Please try again later.")
