@@ -1,0 +1,63 @@
+//
+//  extensions.swift
+//  mistigri_mob
+//
+//  Created by Poomedy Rungen on 09/03/2025.
+//
+
+import SwiftUI
+
+extension Color {
+    static let Cffffff = Color(red: 1.00, green: 1.00, blue: 1.00)
+    static let C693600 = Color(red: 0.41, green: 0.21, blue: 0.00)
+    static let C000000 = Color(red: 0.00, green: 0.00, blue: 0.00)
+    static let Cf7f7f7 = Color(red: 0.97, green: 0.97, blue: 0.97)
+    static let C4a454f = Color(red: 0.29, green: 0.27, blue: 0.31)
+    static let C757575 = Color(red: 0.46, green: 0.46, blue: 0.46)
+    static let Cffe3cf = Color(red: 1.00, green: 0.89, blue: 0.81)
+    static let C1c1c21 = Color(red: 0.11, green: 0.11, blue: 0.13)
+    static let Cd1bdff = Color(red: 0.82, green: 0.74, blue: 1.00)
+    static let C1f1f1f = Color(red: 0.12, green: 0.12, blue: 0.12)
+    static let C66548f = Color(red: 0.40, green: 0.33, blue: 0.56)
+    static let C171724 = Color(red: 0.09, green: 0.09, blue: 0.14)
+    static let Cfff7ff = Color(red: 1.00, green: 0.97, blue: 1.00)
+    static let Ce07800 = Color(red: 0.88, green: 0.47, blue: 0.00)
+    static let Cffb05c = Color(red: 1.00, green: 0.69, blue: 0.36)
+    static let Ca35400 = Color(red: 0.64, green: 0.33, blue: 0.00)
+    static let Cffdb99 = Color(red: 1.00, green: 0.86, blue: 0.60)
+    static let Cfff7f7 = Color(red: 1.00, green: 0.97, blue: 0.97)
+    static let Cf5f5f5 = Color(red: 0.96, green: 0.96, blue: 0.96)
+    static let C828282 = Color(red: 0.51, green: 0.51, blue: 0.51)
+    static let Cffc9e8 = Color(red: 1.00, green: 0.79, blue: 0.91)
+    static let C303030 = Color(red: 0.19, green: 0.19, blue: 0.19)
+    static let Cfff2e0 = Color(red: 1.00, green: 0.95, blue: 0.88)
+    static let Cffaddb = Color(red: 1.00, green: 0.68, blue: 0.86)
+    static let Cd9d9d9 = Color(red: 0.85, green: 0.85, blue: 0.85)
+    static let Ce3d1fa = Color(red: 0.89, green: 0.82, blue: 0.98)
+    static let Ce0994d = Color(red: 0.88, green: 0.60, blue: 0.30)
+    static let Cfffcf0 = Color(red: 1.00, green: 0.99, blue: 0.94)
+    static let Ce6e6e6 = Color(red: 0.90, green: 0.90, blue: 0.90)
+    static let Cffe8a3 = Color(red: 1.00, green: 0.91, blue: 0.64)
+    static let Cffe6e6 = Color(red: 1.00, green: 0.90, blue: 0.90)
+    static let Cffeded = Color(red: 1.00, green: 0.93, blue: 0.93)
+    static let Cfccfff = Color(red: 0.99, green: 0.81, blue: 1.00)
+    static let Cfcd4d1 = Color(red: 0.99, green: 0.83, blue: 0.82)
+    static let C852121 = Color(red: 0.52, green: 0.13, blue: 0.13)
+    static let Cfffcf7 = Color(red: 1.00, green: 0.99, blue: 0.97)
+    static let Cc47d7d = Color(red: 0.77, green: 0.49, blue: 0.49)
+    static let Cffd6d6 = Color(red: 1.00, green: 0.84, blue: 0.84)
+    static let Cb3b3b3 = Color(red: 0.70, green: 0.70, blue: 0.70)
+    static let Ccceb9c = Color(red: 0.80, green: 0.92, blue: 0.61)
+    static let Cedffcf = Color(red: 0.93, green: 1.00, blue: 0.81)
+    static let Cb5cc8c = Color(red: 0.71, green: 0.80, blue: 0.55)
+    static let Cffe0db = Color(red: 1.00, green: 0.88, blue: 0.86)
+    static let Cff5252 = Color(red: 1.00, green: 0.32, blue: 0.32)
+    static let Cffe3e3 = Color(red: 1.00, green: 0.89, blue: 0.89)
+    static let Cebdeff = Color(red: 0.92, green: 0.87, blue: 1.00)
+    static let C4f388a = Color(red: 0.31, green: 0.22, blue: 0.54)
+    static let Cfff5e0 = Color(red: 1.00, green: 0.96, blue: 0.88)
+    static let Cbd9ceb = Color(red: 0.74, green: 0.61, blue: 0.92)
+    static let Cfc6fd7 = Color(red: 0.99, green: 0.44, blue: 0.84)
+    static let CFFF3E2 = Color(red: 1.0, green: 0.95, blue: 0.89)
+
+}

@@ -9,6 +9,10 @@ import SwiftUI
 
 struct StoreHomeScreen: View {
     var body: some View {
-        Text("Homepage!")
+        GameSearchView()
     }
+}
+
+#Preview {
+    StoreHomeScreen()
 }

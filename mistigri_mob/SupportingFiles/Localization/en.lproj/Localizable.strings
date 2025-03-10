@@ -9,3 +9,4 @@
 "Login.EmailField.Title" = "Email";
 "Login.PasswordField.Title" = "Password";
 "Login.LoginButton.Title" = "Login";
+"Login.Text.Title" = "Login";
