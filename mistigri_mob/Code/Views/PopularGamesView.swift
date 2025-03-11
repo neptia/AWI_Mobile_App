@@ -14,41 +14,40 @@ struct PopularGamesView: View {
         VStack(alignment: .leading) {
             Text("Popular.Text.Title".localized)
                 .font(.headline)
+                .foregroundColor(Color.C693600)
                 .padding(.leading)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     Button(action: { selectedTag = nil }) { Text("All")
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
-                            .background(selectedTag == nil ? Color.blue : Color.gray.opacity(0.2))
-                            .foregroundColor(selectedTag == nil ? .white : .black)
-                            .cornerRadius(10)
+                            .background(selectedTag == nil ? Color.Ca35400 : Color.Cffb05c)
+                            .foregroundColor(selectedTag == nil ? .white : Color.Ca35400)
+                            .cornerRadius(6)
                     }
                     ForEach(viewModel.uniqueTags(), id: \.self) { tag in Button(action: { selectedTag = tag }) {
                         Text(tag)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
-                            .background(selectedTag == tag ? Color.blue : Color.gray.opacity(0.2))
-                            .foregroundColor(selectedTag == tag ? .white : .black)
-                            .cornerRadius(10)
+                            .background(selectedTag == tag ? Color.Ca35400 : Color.Cffb05c)
+                            .foregroundColor(selectedTag == tag ? .white : Color.Ca35400)
+                            .cornerRadius(6)
                     }
                     }
                 }
                 .padding(.horizontal)
-            }
+            }.padding(.bottom, 10)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
                     ForEach(viewModel.filteredPopularGames(selectedTag: selectedTag)) { game in
                         VStack {
                             Rectangle()
                                 .frame(width: 100, height: 100)
-                                .foregroundColor(.gray.opacity(0.3))
+                                .foregroundColor(Color.CFFE4CE)
                                 .cornerRadius(10)
                             Text(game.name)
                                 .font(.body)
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 6)
-                                .background(Color.gray.opacity(0.2))
+                                .padding(.top, 0)
                                 .cornerRadius(10)
                         }
                     }

@@ -10,16 +10,24 @@ import SwiftUI
 struct StoreHomeScreen: View {
     var body: some View {
         NavigationStack {
-            VStack {
-                List {
-                    ImageSliderView()
-                        .frame(height: 200)
-                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            Color.CFFF8F7
+                .ignoresSafeArea()
+                .overlay {
+                    ScrollView(.vertical) {
+                        VStack {
+                            List {
+                                ImageSliderView()
+                                    .frame(height: 200)
+                                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            }.scrollContentBackground(.hidden)
+                                .frame(height: 250)
+                            VStack {
+                                PopularGamesView()
+                                NewGamesView()
+                            }
+                        }
+                    }
                 }
-                PopularGamesView()
-                NewGamesView()
-            }
-
         }
     }
 }

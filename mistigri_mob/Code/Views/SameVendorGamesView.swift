@@ -1,21 +1,20 @@
 //
-//  NewGamesView.swift
+//  VendorGamesView.swift
 //  mistigri_mob
 //
-//  Created by Poomedy Rungen on 10/03/2025.
+//  Created by Poomedy Rungen on 11/03/2025.
 //
 
 import SwiftUI
 
-struct NewGamesView: View {
+struct SameVendorGamesView: View {
     @StateObject var viewModel = GameViewModel()
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("New.Text.Title".localized)
+            Text("SameVendor.Text.Title".localized)
                 .font(.headline)
                 .foregroundColor(Color.C693600)
-                .padding(.leading)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) {
                     ForEach(viewModel.games, id: \.id) { game in
@@ -41,7 +40,6 @@ struct NewGamesView: View {
                         }
                     }
                 }
-                .padding(.horizontal)
             }
         }
         .onAppear {
@@ -51,5 +49,5 @@ struct NewGamesView: View {
 }
 
 #Preview {
-    NewGamesView()
+    SameVendorGamesView()
 }

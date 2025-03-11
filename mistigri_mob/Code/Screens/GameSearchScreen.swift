@@ -13,29 +13,25 @@ struct GameSearchScreen: View {
 
     var body: some View {
         NavigationStack {
-                // List displaying the filtered games
-                    List(viewModel.filteredGames(searchText: searchText), id: \.id) { game in
-                        NavigationLink(destination: GameDetailScreen(game: game)) {
-                            Text(game.name)
-                        }
-                    }
-                .searchable(text: $searchText, prompt: "Search for a game...")
-                // Search suggestions based on the search text
-                .searchSuggestions {
-                    Section {
-                        // Filtered games suggestions, displaying up to 3 results
-                        ForEach(viewModel.filteredGames(searchText: searchText).prefix(3), id: \.id) { suggestion in
-                            Text(suggestion.name) // Suggestion display
-                                .searchCompletion(suggestion.name) // Completing search text with the suggestion
-                        }
-                    }
-                }
-            }
+            // List displaying the filtered games
+            List(viewModel.filteredGames(searchText: searchText), id: \.id) { game in
+                NavigationLink(destination: GameDetailScreen(game: game)) {
+                    Text(game.name)
+                }.listRowBackground(Color.CFFF8F7)
+            }.scrollContentBackground(.hidden)
+                .background(Color.CFFF3E2)
+            .searchable(text: $searchText, prompt: "Search for a game...")
+            // Search suggestions based on the search text
             .onAppear {
                 // Fetch games when the view appears
                 viewModel.fetchGames {
                     // Handle post-fetch actions if needed
+                }
             }
         }
     }
+}
+
+#Preview {
+    GameSearchScreen()
 }

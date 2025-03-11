@@ -29,6 +29,7 @@ class TabsCoordinator: CustomCoordinator {
         tab1 = CommonCoordinator(alertManager: alertManager)
         tab2 = CommonCoordinator(alertManager: alertManager)
         tab3 = CommonCoordinator(alertManager: alertManager)
+        UITabBar.appearance().backgroundColor = UIColor(Color.CFFF3E2)
     }
 
     func destination() -> some View {

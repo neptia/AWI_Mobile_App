@@ -9,11 +9,15 @@ struct GameResponse: Decodable {
     let games: [GameResponseData]
 }
 
-struct GameResponseData: Decodable, Identifiable {
+struct GameResponseData: Decodable, Identifiable, Equatable {
     let id: String
     let name: String
     let editor: String
     let tags: [String]?
+
+    static func == (lhs: GameResponseData, rhs: GameResponseData) -> Bool {
+            return lhs.id == rhs.id
+        }
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
