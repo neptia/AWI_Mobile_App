@@ -10,16 +10,22 @@ import Coordinators
 
 class CommonCoordinator: NavigationCoordinator {
     @ObservedObject var alertManager = AlertManager()
+    @Published var navigationPath = NavigationPath()
 
     init(alertManager: AlertManager) {
-            self.alertManager = alertManager
-        }
+        self.alertManager = alertManager
+    }
 
     // screens available for navigation
     enum Screen: ScreenProtocol {
         case home
         case login
         case search
+        case all
+    }
+
+    func navigate(to screen: Screen) {
+        navigationPath.append(screen)
     }
 
     // view for each screen
@@ -28,6 +34,7 @@ class CommonCoordinator: NavigationCoordinator {
         case .home: StoreHomeScreen()
         case .login: LoginScreen(router: Router()).environmentObject(alertManager)
         case .search: GameSearchScreen()
+        case .all: AllGamesScreen()
         }
     }
 }

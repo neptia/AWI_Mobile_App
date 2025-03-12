@@ -6,9 +6,22 @@
 //
 
 import SwiftUI
-
 struct DashboardScreen: View {
+    @ObservedObject var router: Router
+
     var body: some View {
-        Text("Dashboard")
+        VStack {
+            Text("Dashboard")
+
+            Button("Go to Home") {
+                router.path.append("dashhome")
+            }
+        }
+        .navigationDestination(for: String.self) { value in
+            if value == "dashhome" {
+                DashHomeScreen(router: router)
+                    .toolbar(.hidden, for: .tabBar)
+            }
+        }
     }
 }

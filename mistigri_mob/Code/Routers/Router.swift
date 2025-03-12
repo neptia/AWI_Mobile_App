@@ -1,4 +1,3 @@
-//
 //  Router.swift
 //  mistigri_mob
 //
@@ -7,12 +6,20 @@
 
 import SwiftUI
 
+
 class Router: ObservableObject {
-    @Published var navigateToDashboardScreen = false
+    @Published var path = NavigationPath()
+
     func navigateToDashboard() {
         DispatchQueue.main.async {
-            self.navigateToDashboardScreen = true
+            self.path.append("dashboard") // ✅ Push Dashboard onto the navigation stack
         }
+    }
 
+    func resetToDashboard() {
+        DispatchQueue.main.async {
+            self.path = NavigationPath() // ✅ Reset stack to make Dashboard the root
+            self.path.append("dashboard")
+        }
     }
 }

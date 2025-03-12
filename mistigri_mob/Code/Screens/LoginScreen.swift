@@ -16,7 +16,7 @@ struct LoginScreen: View {
         _viewModel = StateObject(wrappedValue: LoginViewModel(router: router))
     }
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.path) {
             Color.CFFF3E2
                 .ignoresSafeArea()
                 .overlay {
@@ -78,12 +78,12 @@ struct LoginScreen: View {
                     .padding(30)
                     .padding(.bottom, 80)
                     .background(Color.CFFF3E2)
-                    .navigationDestination(
-                        isPresented: $router.navigateToDashboardScreen ) {
-                            DashboardScreen()
+                    .navigationDestination(for: String.self) { value in
+                        if value == "dashboard" {
+                            DashboardScreen(router: router)
                                 .toolbar(.hidden, for: .tabBar)
-                                .padding().navigationBarBackButtonHidden(true)
                         }
+                    }
                 }
         }
     }

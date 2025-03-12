@@ -27,7 +27,9 @@ class LoginViewModel: ObservableObject {
             )
         ).call(onSuccess: { [self] _ in
             // Login succesful go to homepage
-            router.navigateToDashboard()
+            DispatchQueue.main.async {
+                        router.resetToDashboard() // ✅ Reset stack so Dashboard is the root
+                    }
         }, onError: { errorMessage in
             // Show error alert on login failure
             alertManager.showAlertMessage(message: errorMessage)
