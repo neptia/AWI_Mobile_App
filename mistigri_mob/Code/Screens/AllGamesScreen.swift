@@ -78,7 +78,7 @@ struct AllGamesScreen: View {
             }
         }
         .onAppear {
-            viewModel.fetchGames { }
+            viewModel.fetchAllGames { }
         }
     }
 }

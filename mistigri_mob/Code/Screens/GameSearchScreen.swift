@@ -24,7 +24,7 @@ struct GameSearchScreen: View {
             // Search suggestions based on the search text
             .onAppear {
                 // Fetch games when the view appears
-                viewModel.fetchGames {
+                viewModel.fetchAllGames {
                     // Handle post-fetch actions if needed
                 }
             }

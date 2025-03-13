@@ -14,6 +14,7 @@ struct GameResponseData: Decodable, Identifiable, Equatable {
     let name: String
     let editor: String
     let tags: [String]?
+    let minUnitPrice: Double?
 
     static func == (lhs: GameResponseData, rhs: GameResponseData) -> Bool {
             return lhs.id == rhs.id
@@ -24,5 +25,6 @@ struct GameResponseData: Decodable, Identifiable, Equatable {
         case name
         case editor
         case tags
+        case minUnitPrice
     }
 }

@@ -43,7 +43,7 @@ struct SameVendorGamesView: View {
             }
         }
         .onAppear {
-            viewModel.fetchGames { }
+            viewModel.fetchAllGames { }
         }
     }
 }

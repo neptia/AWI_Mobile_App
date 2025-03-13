@@ -56,7 +56,7 @@ struct PopularGamesView: View {
             }
         }
         .onAppear {
-            viewModel.fetchGames { }
+            viewModel.fetchTopGames { }
         }
     }
 }

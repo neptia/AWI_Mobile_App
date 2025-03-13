@@ -11,9 +11,23 @@ class GameViewModel: ObservableObject {
     @Published var games: [GameResponseData] = [] // Store the games
     @Published var isLoading = false
 
-    // Fetch the games from the network or local storage
-    func fetchGames(completion: @escaping () -> Void) {
-        let fetchAction = FetchGamesAction()
+    // Fetch all games
+    func fetchAllGames(completion: @escaping () -> Void) {
+        let fetchAction = FetchAllGamesAction()
+        fetchAction.call(onSuccess: { games in
+            DispatchQueue.main.async {
+                self.games = games
+                completion()
+            }
+        }, onError: { error in
+            // Handle the error, maybe set a message or alert
+            print(error)
+        })
+    }
+
+    // Fetch top games
+    func fetchTopGames(completion: @escaping () -> Void) {
+        let fetchAction = FetchTopGamesAction()
         fetchAction.call(onSuccess: { games in
             DispatchQueue.main.async {
                 self.games = games

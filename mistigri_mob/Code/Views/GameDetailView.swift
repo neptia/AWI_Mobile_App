@@ -58,6 +58,3 @@ struct GameDetailView: View {
         }
     }
 }
-
-#Preview {
-    GameDetailView(game: .init(id: "1", name: "Test Game", editor: "Test Editor", tags: ["test","test1","test2"]))}

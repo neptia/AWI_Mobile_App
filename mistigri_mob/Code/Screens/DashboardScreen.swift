@@ -24,31 +24,34 @@ struct DashboardScreen: View {
                 ForEach(dashComponent) { component in
                     NavigationLink(value: component) {
                         VStack {
+                            Image(component.image)
+                                .resizable()
+                                .frame(width: 60, height: 60, alignment: .bottom)
                             Text(component.name)
                                 .font(.headline)
-                                .foregroundColor(.white)
-                                .padding()
-                                .frame(maxWidth: .infinity, minHeight: 100)
-                                .background(Color.blue)
-                                .cornerRadius(10)
+                                .foregroundColor(Color.C693600)
                         }
+                        .padding()
+                        .frame(maxWidth: 150, minHeight: 150)
+                        .background(Color.CFFE4CE)
+                        .cornerRadius(8)
                     }
                 }
             }
             .padding()
         }
         .navigationTitle("Dashboard")
-        .navigationDestination(for: DashComponent.self) { dashComponent in
-            DashComponentDetail(dashComponent: dashComponent)
+        .navigationDestination(for: DashComponent.self) { _ in
+            DashComponentDetail()
         }
     }
 }
 
 #Preview {
-    var dashComponent: [DashComponent] = [
-        DashComponent(id: UUID(), name: "Room 1", image: "room1"),
-        DashComponent(id: UUID(), name: "Room 2", image: "room2"),
-        DashComponent(id: UUID(), name: "Room 3", image: "room3")
+    let dashComponent: [DashComponent] = [
+        DashComponent(id: UUID(), name: "Home", image: "Dashhome"),
+        DashComponent(id: UUID(), name: "Checkout", image: "Checkout"),
+        DashComponent(id: UUID(), name: "Deposit", image: "Deposit")
     ]
     DashboardScreen(dashComponent: dashComponent)
 }

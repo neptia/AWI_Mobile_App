@@ -33,11 +33,13 @@ struct NewGamesView: View {
                                 .font(.body)
                                 .padding(.bottom, 0)
                                 .padding(.horizontal, 12)
-                            Text("$10.99")
-                                .font(.system(size: 16, weight: .heavy))
-                                .padding(.horizontal, 12)
-                                .padding(.bottom, 3)
-                                .foregroundColor(Color.Ce07800)
+                            if let minPrice = game.minUnitPrice {
+                                Text(String(format: "%.2f", minPrice))
+                                            .font(.system(size: 16, weight: .heavy))
+                                            .padding(.horizontal, 12)
+                                            .padding(.bottom, 3)
+                                            .foregroundColor(Color.Ce07800)
+                            }
                         }
                     }
                 }
@@ -45,7 +47,7 @@ struct NewGamesView: View {
             }
         }
         .onAppear {
-            viewModel.fetchGames { }
+            viewModel.fetchAllGames { }
         }
     }
 }

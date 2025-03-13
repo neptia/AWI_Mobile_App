@@ -18,7 +18,6 @@ struct LoginScreen: View {
         DashComponent(id: UUID(), name: "Room 3", image: "room3")
     ]
 
-
     init(router: Router) {
         _router = StateObject(wrappedValue: router)
         _viewModel = StateObject(wrappedValue: LoginViewModel(router: router))

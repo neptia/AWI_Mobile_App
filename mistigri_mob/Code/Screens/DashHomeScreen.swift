@@ -17,13 +17,9 @@ struct DashComponent: Identifiable, Hashable {
 }
 
 struct DashComponentDetail: View {
-
-    let dashComponent: DashComponent
-
     var body: some View {
         VStack {
-            Text(dashComponent.name)
-                .font(.system(size: 24))
+            Text("Hello")
         }
         .padding()
     }

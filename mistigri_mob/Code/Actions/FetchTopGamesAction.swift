@@ -1,15 +1,15 @@
 //
-//  FetchGamesAction.swift
+//  FetchTopGames.swift
 //  mistigri_mob
 //
-//  Created by Poomedy Rungen on 10/03/2025.
+//  Created by Poomedy Rungen on 13/03/2025.
 //
 
-import Foundation
+import SwiftUI
 
-struct FetchGamesAction {
+struct FetchTopGamesAction {
     func call(onSuccess: @escaping ([GameResponseData]) -> Void, onError: @escaping (String) -> Void) {
-        let path = "/games/100"
+        let path = "/games/top"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             print("Invalid Url")
@@ -41,4 +41,5 @@ struct FetchGamesAction {
         }
         task.resume()
     }
+
 }
