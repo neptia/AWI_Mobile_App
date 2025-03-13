@@ -12,13 +12,13 @@ class Router: ObservableObject {
 
     func navigateToDashboard() {
         DispatchQueue.main.async {
-            self.path.append("dashboard") // ✅ Push Dashboard onto the navigation stack
+            self.path.append("dashboard")
         }
     }
 
     func resetToDashboard() {
         DispatchQueue.main.async {
-            self.path = NavigationPath() // ✅ Reset stack to make Dashboard the root
+            self.path = NavigationPath()
             self.path.append("dashboard")
         }
     }

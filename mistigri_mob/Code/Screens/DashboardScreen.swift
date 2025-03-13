@@ -7,21 +7,48 @@
 
 import SwiftUI
 struct DashboardScreen: View {
-    @ObservedObject var router: Router
+    private var dashComponent: [DashComponent]
+
+    init(dashComponent: [DashComponent]) {
+        self.dashComponent = dashComponent
+    }
+
+    private let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
 
     var body: some View {
-        VStack {
-            Text("Dashboard")
-
-            Button("Go to Home") {
-                router.path.append("dashhome")
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(dashComponent) { component in
+                    NavigationLink(value: component) {
+                        VStack {
+                            Text(component.name)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(maxWidth: .infinity, minHeight: 100)
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                        }
+                    }
+                }
             }
+            .padding()
         }
-        .navigationDestination(for: String.self) { value in
-            if value == "dashhome" {
-                DashHomeScreen(router: router)
-                    .toolbar(.hidden, for: .tabBar)
-            }
+        .navigationTitle("Dashboard")
+        .navigationDestination(for: DashComponent.self) { dashComponent in
+            DashComponentDetail(dashComponent: dashComponent)
         }
     }
+}
+
+#Preview {
+    var dashComponent: [DashComponent] = [
+        DashComponent(id: UUID(), name: "Room 1", image: "room1"),
+        DashComponent(id: UUID(), name: "Room 2", image: "room2"),
+        DashComponent(id: UUID(), name: "Room 3", image: "room3")
+    ]
+    DashboardScreen(dashComponent: dashComponent)
 }

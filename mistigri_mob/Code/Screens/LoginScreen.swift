@@ -11,6 +11,14 @@ struct LoginScreen: View {
     @EnvironmentObject var alertManager: AlertManager
     @StateObject var router = Router()
     @StateObject var viewModel: LoginViewModel
+
+    var dashComponent: [DashComponent] = [
+        DashComponent(id: UUID(), name: "Room 1", image: "room1"),
+        DashComponent(id: UUID(), name: "Room 2", image: "room2"),
+        DashComponent(id: UUID(), name: "Room 3", image: "room3")
+    ]
+
+
     init(router: Router) {
         _router = StateObject(wrappedValue: router)
         _viewModel = StateObject(wrappedValue: LoginViewModel(router: router))
@@ -80,7 +88,7 @@ struct LoginScreen: View {
                     .background(Color.CFFF3E2)
                     .navigationDestination(for: String.self) { value in
                         if value == "dashboard" {
-                            DashboardScreen(router: router)
+                            DashboardScreen(dashComponent: dashComponent)
                                 .toolbar(.hidden, for: .tabBar)
                         }
                     }

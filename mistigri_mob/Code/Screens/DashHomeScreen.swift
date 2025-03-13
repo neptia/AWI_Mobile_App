@@ -6,21 +6,25 @@
 //
 import SwiftUI
 
-struct DashHomeScreen: View {
-    @ObservedObject var router: Router
-    
+struct DashComponent: Identifiable, Hashable {
+    var id = UUID()
+    let name: String
+    let image: String
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+}
+
+struct DashComponentDetail: View {
+
+    let dashComponent: DashComponent
+
     var body: some View {
         VStack {
-            Text("Dash Home")
+            Text(dashComponent.name)
+                .font(.system(size: 24))
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: {
-                    router.resetToDashboard()
-                }) {
-                    Label("Back", systemImage: "arrow.left.circle")
-                }
-            }
-        }
+        .padding()
     }
 }

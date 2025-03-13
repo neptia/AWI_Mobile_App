@@ -12,7 +12,7 @@ import Coordinators
 class LoginViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
-    private var router: Router
+    @ObservedObject var router: Router
 
     init(router: Router) {
         self.router = router
@@ -28,8 +28,8 @@ class LoginViewModel: ObservableObject {
         ).call(onSuccess: { [self] _ in
             // Login succesful go to homepage
             DispatchQueue.main.async {
-                        router.resetToDashboard() // ✅ Reset stack so Dashboard is the root
-                    }
+                self.router.path.append("dashboard")
+            }
         }, onError: { errorMessage in
             // Show error alert on login failure
             alertManager.showAlertMessage(message: errorMessage)
