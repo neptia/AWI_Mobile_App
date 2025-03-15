@@ -9,7 +9,9 @@ import Foundation
 
 class GameViewModel: ObservableObject {
     @Published var games: [GameResponseData] = [] // Store the games
+    @Published var gamePrices: [GamePricesResponseData] = []
     @Published var isLoading = false
+    @Published var game_id: String = ""
 
     // Fetch all games
     func fetchAllGames(completion: @escaping () -> Void) {
@@ -61,4 +63,17 @@ class GameViewModel: ObservableObject {
         let allTags = games.compactMap { $0.tags }.flatMap { $0 }
         return Array(Set(allTags)).sorted()
     }
+
+    func fetchUnitPrices(param: GameResponseData, completion: @escaping ([GamePricesResponseData]) -> Void) {
+        let fetchAction = FetchSameGamePricesAction(parameters: GamePricesRequest(game_id: param.id))
+        fetchAction.call(onSuccess: { games in
+            DispatchQueue.main.async {
+                self.gamePrices = games
+                completion(games)
+            }
+        }, onError: { error in
+            print(error)
+        })
+    }
+
 }

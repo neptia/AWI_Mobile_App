@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		622F8E71D25A178AF9E2EEF6 /* Pods_mistigri_mobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C001E19EBA042B87422A31 /* Pods_mistigri_mobTests.framework */; };
-		8255994A775E6B5B2065B4C2 /* Pods_mistigri_mob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEF1A78813726DBB450EE68 /* Pods_mistigri_mob.framework */; };
-		9A59DA20D2A9BCD07C9C5FDC /* Pods_mistigri_mob_mistigri_mobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6178F341A28EAA5FC4212B34 /* Pods_mistigri_mob_mistigri_mobUITests.framework */; };
+		187E0A0C9EE3EEC957DFE172 /* Pods_mistigri_mob_mistigri_mobUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF15E36D22DCB671784A64F3 /* Pods_mistigri_mob_mistigri_mobUITests.framework */; };
+		3FE9ECD4085D09E5C7EA0B3C /* Pods_mistigri_mob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF55B64FDEF1C649C906B3 /* Pods_mistigri_mob.framework */; };
 		B0BC81D52D7DCD2900CC12A8 /* Coordinators in Frameworks */ = {isa = PBXBuildFile; productRef = B0BC81D42D7DCD2900CC12A8 /* Coordinators */; };
+		FAE14FCCB1FD2097FC06D44E /* Pods_mistigri_mobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BF95AA170614EEAF207184 /* Pods_mistigri_mobTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,18 +31,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		211A46A3E2F3BE9E0D486A11 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig"; path = "Target Support Files/Pods-mistigri_mob-mistigri_mobUITests/Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2CEF1A78813726DBB450EE68 /* Pods_mistigri_mob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mistigri_mob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6178F341A28EAA5FC4212B34 /* Pods_mistigri_mob_mistigri_mobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mistigri_mob_mistigri_mobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75C001E19EBA042B87422A31 /* Pods_mistigri_mobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mistigri_mobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		973352CD41246F0F9EFB0F40 /* Pods-mistigri_mobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mobTests.debug.xcconfig"; path = "Target Support Files/Pods-mistigri_mobTests/Pods-mistigri_mobTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9E82734DA4558FD6B302B404 /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig"; path = "Target Support Files/Pods-mistigri_mob-mistigri_mobUITests/Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A32DDD452C5FB474239D09BE /* Pods-mistigri_mobTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mobTests.release.xcconfig"; path = "Target Support Files/Pods-mistigri_mobTests/Pods-mistigri_mobTests.release.xcconfig"; sourceTree = "<group>"; };
+		102F926F29EE5AE52DD77778 /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig"; path = "Target Support Files/Pods-mistigri_mob-mistigri_mobUITests/Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA173348595358DF20D95F9 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig"; path = "Target Support Files/Pods-mistigri_mob-mistigri_mobUITests/Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7BCD476B80A4C50134921494 /* Pods-mistigri_mob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mob.debug.xcconfig"; path = "Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob.debug.xcconfig"; sourceTree = "<group>"; };
+		7E8F26FC8F3643257CA347F7 /* Pods-mistigri_mobTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mobTests.release.xcconfig"; path = "Target Support Files/Pods-mistigri_mobTests/Pods-mistigri_mobTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E490A0C5AD23CDD1A2A1C27 /* Pods-mistigri_mob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mob.release.xcconfig"; path = "Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob.release.xcconfig"; sourceTree = "<group>"; };
+		9DCF55B64FDEF1C649C906B3 /* Pods_mistigri_mob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mistigri_mob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF15E36D22DCB671784A64F3 /* Pods_mistigri_mob_mistigri_mobUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mistigri_mob_mistigri_mobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B059AF7B2D7CA900003930C7 /* mistigri_mob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mistigri_mob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B059AF8B2D7CA901003930C7 /* mistigri_mobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mistigri_mobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B059AF952D7CA901003930C7 /* mistigri_mobUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mistigri_mobUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B33087C14561331E471ED317 /* Pods-mistigri_mob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mob.release.xcconfig"; path = "Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob.release.xcconfig"; sourceTree = "<group>"; };
-		D094D4535F29E756398CA9B6 /* Pods-mistigri_mob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mob.debug.xcconfig"; path = "Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob.debug.xcconfig"; sourceTree = "<group>"; };
+		F6BF95AA170614EEAF207184 /* Pods_mistigri_mobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mistigri_mobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE10E2D8E9D6999067359BC /* Pods-mistigri_mobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mistigri_mobTests.debug.xcconfig"; path = "Target Support Files/Pods-mistigri_mobTests/Pods-mistigri_mobTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -83,11 +83,6 @@
 			path = mistigri_mob;
 			sourceTree = "<group>";
 		};
-		B0BC818A2D7CF1E900CC12A8 /* Config */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Config;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8255994A775E6B5B2065B4C2 /* Pods_mistigri_mob.framework in Frameworks */,
 				B0BC81D52D7DCD2900CC12A8 /* Coordinators in Frameworks */,
+				3FE9ECD4085D09E5C7EA0B3C /* Pods_mistigri_mob.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				622F8E71D25A178AF9E2EEF6 /* Pods_mistigri_mobTests.framework in Frameworks */,
+				FAE14FCCB1FD2097FC06D44E /* Pods_mistigri_mobTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,32 +107,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A59DA20D2A9BCD07C9C5FDC /* Pods_mistigri_mob_mistigri_mobUITests.framework in Frameworks */,
+				187E0A0C9EE3EEC957DFE172 /* Pods_mistigri_mob_mistigri_mobUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F2E7466CBFD76EEA60436FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2CEF1A78813726DBB450EE68 /* Pods_mistigri_mob.framework */,
-				6178F341A28EAA5FC4212B34 /* Pods_mistigri_mob_mistigri_mobUITests.framework */,
-				75C001E19EBA042B87422A31 /* Pods_mistigri_mobTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		594111D8BE65F2446102D72E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D094D4535F29E756398CA9B6 /* Pods-mistigri_mob.debug.xcconfig */,
-				B33087C14561331E471ED317 /* Pods-mistigri_mob.release.xcconfig */,
-				9E82734DA4558FD6B302B404 /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */,
-				211A46A3E2F3BE9E0D486A11 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */,
-				973352CD41246F0F9EFB0F40 /* Pods-mistigri_mobTests.debug.xcconfig */,
-				A32DDD452C5FB474239D09BE /* Pods-mistigri_mobTests.release.xcconfig */,
+				7BCD476B80A4C50134921494 /* Pods-mistigri_mob.debug.xcconfig */,
+				8E490A0C5AD23CDD1A2A1C27 /* Pods-mistigri_mob.release.xcconfig */,
+				102F926F29EE5AE52DD77778 /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */,
+				2CA173348595358DF20D95F9 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */,
+				FAE10E2D8E9D6999067359BC /* Pods-mistigri_mobTests.debug.xcconfig */,
+				7E8F26FC8F3643257CA347F7 /* Pods-mistigri_mobTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -145,11 +130,10 @@
 		B059AF722D7CA900003930C7 = {
 			isa = PBXGroup;
 			children = (
-				B0BC818A2D7CF1E900CC12A8 /* Config */,
 				B059AF7D2D7CA900003930C7 /* mistigri_mob */,
 				B059AF7C2D7CA900003930C7 /* Products */,
 				594111D8BE65F2446102D72E /* Pods */,
-				4F2E7466CBFD76EEA60436FC /* Frameworks */,
+				FABCFCABFF89F7B450A2054A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +147,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		FABCFCABFF89F7B450A2054A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DCF55B64FDEF1C649C906B3 /* Pods_mistigri_mob.framework */,
+				AF15E36D22DCB671784A64F3 /* Pods_mistigri_mob_mistigri_mobUITests.framework */,
+				F6BF95AA170614EEAF207184 /* Pods_mistigri_mobTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,11 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B059AF9F2D7CA901003930C7 /* Build configuration list for PBXNativeTarget "mistigri_mob" */;
 			buildPhases = (
-				19E7B419F286427299170ECB /* [CP] Check Pods Manifest.lock */,
+				3EF06A5A822A6A846C8F7308 /* [CP] Check Pods Manifest.lock */,
 				B059AF772D7CA900003930C7 /* Sources */,
 				B059AF782D7CA900003930C7 /* Frameworks */,
 				B059AF792D7CA900003930C7 /* Resources */,
 				B0BC80F12D7CDD3600CC12A8 /* SwiftLint */,
+				D381314C6CA6DDA1DBD51101 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,7 +177,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B059AF7D2D7CA900003930C7 /* mistigri_mob */,
-				B0BC818A2D7CF1E900CC12A8 /* Config */,
 			);
 			name = mistigri_mob;
 			productName = mistigri_mob;
@@ -193,7 +187,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B059AFA22D7CA901003930C7 /* Build configuration list for PBXNativeTarget "mistigri_mobTests" */;
 			buildPhases = (
-				BE8355188480E7327629AAAC /* [CP] Check Pods Manifest.lock */,
+				D3272C7ECE1E28949F493579 /* [CP] Check Pods Manifest.lock */,
 				B059AF872D7CA901003930C7 /* Sources */,
 				B059AF882D7CA901003930C7 /* Frameworks */,
 				B059AF892D7CA901003930C7 /* Resources */,
@@ -212,10 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B059AFA52D7CA901003930C7 /* Build configuration list for PBXNativeTarget "mistigri_mobUITests" */;
 			buildPhases = (
-				661F80E4EACAFA9E813F3263 /* [CP] Check Pods Manifest.lock */,
+				82CC24E1DDF1C3513A6EF970 /* [CP] Check Pods Manifest.lock */,
 				B059AF912D7CA901003930C7 /* Sources */,
 				B059AF922D7CA901003930C7 /* Frameworks */,
 				B059AF932D7CA901003930C7 /* Resources */,
+				6BC9979340BD1443840E2CD6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,7 +295,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19E7B419F286427299170ECB /* [CP] Check Pods Manifest.lock */ = {
+		3EF06A5A822A6A846C8F7308 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,7 +317,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		661F80E4EACAFA9E813F3263 /* [CP] Check Pods Manifest.lock */ = {
+		6BC9979340BD1443840E2CD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mistigri_mob-mistigri_mobUITests/Pods-mistigri_mob-mistigri_mobUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mistigri_mob-mistigri_mobUITests/Pods-mistigri_mob-mistigri_mobUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mistigri_mob-mistigri_mobUITests/Pods-mistigri_mob-mistigri_mobUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82CC24E1DDF1C3513A6EF970 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -347,7 +359,7 @@
 		B0BC80F12D7CDD3600CC12A8 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -359,11 +371,11 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config\n    \"$SRCROOT/mistigri_mob/Config/.swiftlint.yml\"\n";
 		};
-		BE8355188480E7327629AAAC /* [CP] Check Pods Manifest.lock */ = {
+		D3272C7ECE1E28949F493579 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,6 +395,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D381314C6CA6DDA1DBD51101 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -548,7 +577,7 @@
 		};
 		B059AFA02D7CA901003930C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D094D4535F29E756398CA9B6 /* Pods-mistigri_mob.debug.xcconfig */;
+			baseConfigurationReference = 7BCD476B80A4C50134921494 /* Pods-mistigri_mob.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -580,7 +609,7 @@
 		};
 		B059AFA12D7CA901003930C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B33087C14561331E471ED317 /* Pods-mistigri_mob.release.xcconfig */;
+			baseConfigurationReference = 8E490A0C5AD23CDD1A2A1C27 /* Pods-mistigri_mob.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -612,7 +641,7 @@
 		};
 		B059AFA32D7CA901003930C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 973352CD41246F0F9EFB0F40 /* Pods-mistigri_mobTests.debug.xcconfig */;
+			baseConfigurationReference = FAE10E2D8E9D6999067359BC /* Pods-mistigri_mobTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -631,7 +660,7 @@
 		};
 		B059AFA42D7CA901003930C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A32DDD452C5FB474239D09BE /* Pods-mistigri_mobTests.release.xcconfig */;
+			baseConfigurationReference = 7E8F26FC8F3643257CA347F7 /* Pods-mistigri_mobTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -650,7 +679,7 @@
 		};
 		B059AFA62D7CA901003930C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E82734DA4558FD6B302B404 /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */;
+			baseConfigurationReference = 102F926F29EE5AE52DD77778 /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -667,7 +696,7 @@
 		};
 		B059AFA72D7CA901003930C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 211A46A3E2F3BE9E0D486A11 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */;
+			baseConfigurationReference = 2CA173348595358DF20D95F9 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

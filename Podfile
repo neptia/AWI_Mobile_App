@@ -7,6 +7,7 @@ target 'mistigri_mob' do
 
   # Pods for mistigri_mob
   pod 'SwiftLint'
+  pod ‘SwiftKeychainWrapper’
 
   target 'mistigri_mobTests' do
     inherit! :search_paths

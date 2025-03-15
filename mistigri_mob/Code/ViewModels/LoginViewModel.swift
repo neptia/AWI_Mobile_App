@@ -25,11 +25,14 @@ class LoginViewModel: ObservableObject {
                 email: email,
                 password: password
             )
-        ).call(onSuccess: { [self] _ in
+        ).call(onSuccess: { response in
             // Login succesful go to homepage
-            DispatchQueue.main.async {
-                self.router.path.append("dashboard")
-            }
+            //            DispatchQueue.main.async {
+            //                self.router.path.append("dashboard")
+            //            }
+            Auth.shared.setCredentials(
+                token: response.token
+            )
         }, onError: { errorMessage in
             // Show error alert on login failure
             alertManager.showAlertMessage(message: errorMessage)

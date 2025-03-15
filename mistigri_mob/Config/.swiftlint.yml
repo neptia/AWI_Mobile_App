@@ -6,5 +6,8 @@
 //
 
 disabled_rules:
-  - trailing_whitespace
+- trailing_whitespace
+
+excluded:
+- ${PWD}/Pods
 

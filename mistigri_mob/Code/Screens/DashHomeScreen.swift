@@ -6,21 +6,10 @@
 //
 import SwiftUI
 
-struct DashComponent: Identifiable, Hashable {
-    var id = UUID()
-    let name: String
-    let image: String
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
-    }
-}
-
-struct DashComponentDetail: View {
+struct DashHomeScreen: View {
     var body: some View {
         VStack {
             Text("Hello")
         }
-        .padding()
     }
 }

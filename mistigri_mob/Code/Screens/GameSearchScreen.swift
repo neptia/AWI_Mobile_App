@@ -15,7 +15,7 @@ struct GameSearchScreen: View {
         NavigationStack {
             // List displaying the filtered games
             List(viewModel.filteredGames(searchText: searchText), id: \.id) { game in
-                NavigationLink(destination: GameDetailScreen(game: game)) {
+                NavigationLink(destination: GameDetailScreen(game: game, viewModel: viewModel)) {
                     Text(game.name)
                 }.listRowBackground(Color.CFFF8F7)
             }.scrollContentBackground(.hidden)

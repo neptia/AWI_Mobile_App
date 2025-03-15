@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var coordinator = TabsCoordinator()
 
     var body: some View {
-        coordinator.rootView
+
+        RootScreen()
+            .environmentObject(Auth.shared)
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
