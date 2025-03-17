@@ -6,21 +6,54 @@
 //
 
 import Foundation
+import SwiftUI
 
 class DepositViewModel: ObservableObject {
-    @Published var sellers: [SellerResponseData] = []
+    @Published var selectedSeller: SellerResponseData = SellerResponseData(id: "", name: "", email: "", phone: "")
+    @Published var selectedGame: GameResponseData = GameResponseData(id: "", name: "", editor: "", tags: [""], minUnitPrice: 0.0)
+    @Published var displayGamesAdded: [GameDeposited] = []
+    @Published var gamesAdded: [GameDepositRequestData] = []
 
-    // Fetch all sellers
-    func fetchAllSellers(completion: @escaping () -> Void) {
-        let fetchAction = FetchAllSellersAction()
-        fetchAction.call(onSuccess: { sellers in
-            DispatchQueue.main.async {
-                self.sellers = sellers
-                completion()
+    func addGametoBasket(input: GameDeposited, alertManager: AlertManager) {
+        if input.isValid {
+            displayGamesAdded.append(input)
+        } else {
+            alertManager.showAlertMessage(message: "Fields cannot be empty")
+        }
+    }
+
+    func fetchGamesAddedtoBasket() -> [GameDeposited] {
+        return displayGamesAdded
+    }
+
+    func removeGameFromBasket(game: GameDeposited) {
+        displayGamesAdded.removeAll(where: { $0 == game })
+    }
+
+    func depositGames(alertManager: AlertManager) {
+        gamesAdded.removeAll()
+        for i in 0..<displayGamesAdded.count {
+            for _ in 0..<displayGamesAdded[i].quantity {
+                let game = GameDepositRequestData(
+                    unitPrice: displayGamesAdded[i].price,
+                    comment: displayGamesAdded[i].comment ?? "",
+                    state: displayGamesAdded[i].state,
+                    game_id: displayGamesAdded[i].id.uuidString,
+                    barcode_id: UUID().uuidString
+                )
+                gamesAdded.append(game)
             }
-        }, onError: { error in
-            // Handle the error, maybe set a message or alert
-            print(error)
-        })
+        }
+        guard !gamesAdded.isEmpty else {
+            alertManager.showAlertMessage(message: "No games to deposit!")
+            return
+        }
+
+        DepositAction(parameters: GameDepositRequest(barcodes: gamesAdded, seller_id: selectedSeller.id))
+            .call(onSuccess: { response in
+                alertManager.showAlertMessage(message: "Stock added successfully")
+            }, onError: { errorMessage in
+                alertManager.showAlertMessage(message: "Stock deposit failed")
+            })
     }
 }

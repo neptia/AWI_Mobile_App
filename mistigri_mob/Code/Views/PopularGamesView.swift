@@ -18,7 +18,7 @@ struct PopularGamesView: View {
                 .padding(.leading)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    Button(action: { selectedTag = nil }) { Text("All")
+                    Button(action: { selectedTag = nil }) { Text("All.Text.Title".localized)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
                             .background(selectedTag == nil ? Color.Ca35400 : Color.Cffb05c)

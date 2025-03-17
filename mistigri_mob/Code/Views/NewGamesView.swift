@@ -47,7 +47,8 @@ struct NewGamesView: View {
             }
         }
         .onAppear {
-            viewModel.fetchAllGames { }
+            viewModel.fetchNewGames {
+            }
         }
     }
 }

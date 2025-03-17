@@ -33,8 +33,8 @@ class CommonCoordinator: NavigationCoordinator {
         switch screen {
         case .home: StoreHomeScreen()
         case .login: LoginScreen(router: Router()).environmentObject(alertManager)
-        case .search: GameSearchScreen()
-        case .all: AllGamesScreen()
+        case .search: GameSearchScreen().environmentObject(alertManager)
+        case .all: AllGamesScreen().environmentObject(alertManager)
         }
     }
 }

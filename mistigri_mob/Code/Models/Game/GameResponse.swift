@@ -9,7 +9,7 @@ struct GameResponse: Decodable {
     let games: [GameResponseData]
 }
 
-struct GameResponseData: Decodable, Identifiable, Equatable {
+struct GameResponseData: Decodable, Identifiable, Equatable, Hashable {
     let id: String
     let name: String
     let editor: String

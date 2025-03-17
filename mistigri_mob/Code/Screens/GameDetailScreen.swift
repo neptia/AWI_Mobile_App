@@ -9,38 +9,46 @@ import SwiftUI
 
 struct GameDetailScreen: View {
     let game: GameResponseData
-    @State private var selectedPrice: String = "Select a price"
+    @State private var selectedPrice: String = "SelectPrice.Text.Title".localized
     @State private var gamePrices: [GamePricesResponseData] = []
     @StateObject var viewModel: GameViewModel
 
     var body: some View {
-        VStack (alignment: .trailing) {
-                Menu {
-                    ForEach(gamePrices, id: \.barcode_id) { game in
-                        Button(String(game.unitPrice)) {
-                            selectedPrice = String(game.unitPrice)
+        Color.CFFF8F7
+            .ignoresSafeArea()
+            .overlay {
+                VStack {
+                    Image("logo_title")
+                        .resizable()
+                        .frame(width: 200, height: 40)
+                    VStack (alignment: .trailing) {
+                        Menu {
+                            ForEach(gamePrices, id: \.barcode_id) { game in
+                                Button(String(game.unitPrice)) {
+                                    selectedPrice = String(game.unitPrice)
+                                }
+                            }
+                        } label: {
+                            Label(selectedPrice, systemImage: "chevron.down")
+                                .padding(.all,10)
+                                .background(Color.pink.opacity(0.1))
+                                .cornerRadius(8)
+                        }.padding(.trailing,20)
+                        VStack(alignment:.leading) {
+                            GameDetailView(game: game)
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+                                .font(.footnote)
+                                .padding(.top, 10)
+                                .padding(.trailing, 20)
                         }
+                        SameVendorGamesView()
+                        Spacer()
                     }
-                } label: {
-                    Label(selectedPrice, systemImage: "chevron.down")
-                        .padding(.all,10)
-                        .background(Color.pink.opacity(0.1))
-                        .cornerRadius(8)
-                }.padding(.trailing,20)
-            VStack(alignment:.leading) {
-            GameDetailView(game: game)
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                .font(.footnote)
-                .padding(.top, 10)
-                .padding(.trailing, 20)
-        }
-            SameVendorGamesView()
-            Spacer()
-        }
-        .onAppear {fetchPrices()}
-        .padding(.leading, 20)
+                    .onAppear {fetchPrices()}
+                    .padding(.leading, 20)
+                }
+            }
     }
-
     private func fetchPrices() {
         viewModel.fetchUnitPrices(param: game) { prices in
             DispatchQueue.main.async {

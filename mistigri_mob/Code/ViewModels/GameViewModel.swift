@@ -27,6 +27,20 @@ class GameViewModel: ObservableObject {
         })
     }
 
+    // Fetch new games
+    func fetchNewGames(completion: @escaping () -> Void) {
+        let fetchAction = FetchNewGamesAction()
+        fetchAction.call(onSuccess: { games in
+            DispatchQueue.main.async {
+                self.games = games
+                completion()
+            }
+        }, onError: { error in
+            // Handle the error, maybe set a message or alert
+            print(error)
+        })
+    }
+
     // Fetch top games
     func fetchTopGames(completion: @escaping () -> Void) {
         let fetchAction = FetchTopGamesAction()

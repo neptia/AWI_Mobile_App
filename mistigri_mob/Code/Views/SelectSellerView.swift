@@ -8,30 +8,36 @@
 import SwiftUI
 
 struct SelectSellerView: View {
-    @StateObject var model = DepositViewModel()
-       @State private var selectedSeller: String = "Select a seller"
+    @StateObject var viewModel: SellerViewModel = SellerViewModel()
+    @ObservedObject var depositViewModel = DepositViewModel()
+    @State private var selectedSeller: String = "SelectSeller.Text.Title".localized
 
-       var body: some View {
-           VStack {
-               Menu {
-                   ForEach(model.sellers, id: \.id) { seller in
-                       Button(seller.name) {
-                           selectedSeller = seller.name
-                       }
-                   }
-               } label: {
-                   Label(selectedSeller, systemImage: "chevron.down")
-                       .padding()
-                       .frame(maxWidth: .infinity)
-                       .background(Color.CFFDC9A.opacity(0.35))
-                       .cornerRadius(8)
-               }
-           }
-           .padding()
-           .onAppear {
-               model.fetchAllSellers{}
-           }
-       }
+    init(depositViewModel: DepositViewModel = DepositViewModel()) {
+        self.depositViewModel = depositViewModel
+    }
+
+    var body: some View {
+        VStack {
+            Menu {
+                ForEach(viewModel.sellers, id: \.id) { seller in
+                    Button(seller.name) {
+                        selectedSeller = seller.name
+                        depositViewModel.selectedSeller = seller
+                    }
+                }
+            } label: {
+                Label(selectedSeller, systemImage: "chevron.down")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.CFFDC9A.opacity(0.35))
+                    .cornerRadius(8)
+            }
+        }
+        .padding()
+        .onAppear {
+            viewModel.fetchAllSellers {}
+        }
+    }
 }
 
 #Preview {

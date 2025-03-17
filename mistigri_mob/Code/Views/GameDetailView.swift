@@ -29,7 +29,7 @@ struct GameDetailView: View {
                             .padding(.top, 20)
                             .foregroundColor(Color.Ce07800)
                     }
-                    Text("IN STOCK")
+                    Text("INSTOCK.Text.Title".localized)
                         .font(.subheadline)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)

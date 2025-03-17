@@ -15,6 +15,9 @@ struct StoreHomeScreen: View {
                 .overlay {
                     ScrollView(.vertical) {
                         VStack {
+                            Image("logo_title")
+                                .resizable()
+                                .frame(width: 200, height: 40)
                             List {
                                 ImageSliderView()
                                     .frame(height: 200)

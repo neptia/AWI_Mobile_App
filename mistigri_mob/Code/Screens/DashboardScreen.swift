@@ -18,13 +18,13 @@ struct DashComponent: Identifiable, Hashable {
 }
 
 struct DashboardScreen: View {
-
+    @ObservedObject var alertManager = AlertManager()
     @ObservedObject var dashboardVM: DashboardViewModel = DashboardViewModel()
 
     let dashComponent: [DashComponent] = [
-        DashComponent(id: UUID(), name: "Home", image: "Dashhome"),
-        DashComponent(id: UUID(), name: "Checkout", image: "Checkout"),
-        DashComponent(id: UUID(), name: "Deposit", image: "Deposit")
+        DashComponent(id: UUID(), name: "Home.Text.Title".localized, image: "Dashhome"),
+        DashComponent(id: UUID(), name: "Checkout.Text.Title".localized, image: "Checkout"),
+        DashComponent(id: UUID(), name: "Deposit.Text.Title".localized, image: "Deposit")
     ]
 
     private let columns = [
@@ -55,13 +55,15 @@ struct DashboardScreen: View {
                 }
                 .padding()
             }
-            .navigationTitle("Dashboard")
+            .navigationTitle("Dashboard.Text.Title".localized)
             .navigationDestination(for: DashComponent.self) { component in
                 switch component.name {
                 case "Home":
                     DashHomeScreen()
                 case "Deposit":
-                    DepositScreen()
+                    DepositScreen().environmentObject(alertManager)
+                case "Checkout":
+                    CheckoutScreen()
                 default:
                     DashHomeScreen()
                 }

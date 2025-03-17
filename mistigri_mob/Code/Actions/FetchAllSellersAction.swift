@@ -35,7 +35,7 @@ struct FetchAllSellersAction {
                 onSuccess(decodedData.sellers)
             } catch let jsonError {
                 print("Failed to decode json", jsonError)
-                onError("No connection. Please try again later.")
+                onError("Fail to fetch sellers. Please try again later.")
                 return
             }
         }

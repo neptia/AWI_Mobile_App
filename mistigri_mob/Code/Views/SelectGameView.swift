@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct SelectGameView: View {
-    @StateObject var model = GameViewModel()
-    @State private var selectedGame: String = "Select a game"
-    
+    @StateObject var viewModel = GameViewModel()
+    @ObservedObject var depositViewModel: DepositViewModel = DepositViewModel()
+    @State private var selectedGame: String = "SelectGame.Text.Title".localized
+
+    init(depositViewModel: DepositViewModel = DepositViewModel()) {
+        self.depositViewModel = depositViewModel
+    }
 
     var body: some View {
         VStack {
             Menu {
-                ForEach(model.games, id: \.id) { game in
+                ForEach(viewModel.games, id: \.id) { game in
                     Button(game.name) {
                         selectedGame = game.name
+                        depositViewModel.selectedGame = game
                     }
                 }
             } label: {
@@ -30,12 +35,8 @@ struct SelectGameView: View {
         }
         .padding()
         .onAppear {
-            model.fetchAllGames {
-            }
+            viewModel.fetchAllGames  {}
         }
     }
 }
 
-#Preview {
-    SelectGameView()
-}
