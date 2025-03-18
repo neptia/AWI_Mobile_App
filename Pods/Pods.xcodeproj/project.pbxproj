@@ -21,52 +21,71 @@
 /* Begin PBXBuildFile section */
 		0AAC0589F42F20090101EC257FFA6E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
 		2322B663553E808DA9FE343F3D85337B /* Pods-mistigri_mobTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F91825CD0969F6D4CB8AA176FBAEC2 /* Pods-mistigri_mobTests-dummy.m */; };
+		245A898F12A272C39FAE6DEE0248AFFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		40E3E8992FA41D95D9F88FE530CDEB3B /* FloatingButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7629CF01E3741A82707CF650349B2 /* FloatingButton-dummy.m */; };
 		430F6CB726C7300E8CD85CDA7F98034A /* Pods-mistigri_mobTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 395B58446B354D63ED01371A3325F775 /* Pods-mistigri_mobTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43A27A7590AB8B341E0106298FF45CC6 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDA7EEB1F32B0A8FB432314C4D24EA /* KeychainWrapper.swift */; };
-		478D40A254B29DC1408D37D3D6051DF7 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E3E7C47A77F6C4F04227DECAD04A159 /* SwiftKeychainWrapper-dummy.m */; };
-		59FD9E1576CC84B4E7F75B9AB22DAAC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		78FF304C7143B6CDCFE6EAAB3AB4467C /* Pods-mistigri_mob-mistigri_mobUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21397F9EA2FA3DA0D7F3C0D207E2C054 /* Pods-mistigri_mob-mistigri_mobUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BB7EA40D98983D92AB8521EC43AC6D2 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E85604B0D01FCF64D98459DAEBB8B1 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		90494D4E207435ED9C5C10768A88D335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		9DDE9A4DCA7722B701E4BC61B2CD9D6E /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DE1BFEF84DEC6D7B6D3D88C99D287B /* KeychainItemAccessibility.swift */; };
-		B900878A214C72DF2736E38C159D73BF /* Pods-mistigri_mob-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA3C72BE596918AB1AFFC3B310CC9 /* Pods-mistigri_mob-dummy.m */; };
+		43A27A7590AB8B341E0106298FF45CC6 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A0C6752D9D9FFB9FDC1AC5A2E2695 /* KeychainWrapper.swift */; };
+		478D40A254B29DC1408D37D3D6051DF7 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ADE5F83A963DE98165EAC188C1F3A4 /* SwiftKeychainWrapper-dummy.m */; };
+		75824956692ED7ABC8CB640A24554231 /* Pods-mistigri_mob-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2CA3C72BE596918AB1AFFC3B310CC9 /* Pods-mistigri_mob-dummy.m */; };
+		78DB208EFF86C7A4F9F5FF7AC65815FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		7BB7EA40D98983D92AB8521EC43AC6D2 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E6CE6F0012124AEBC5A6FF923CF8873C /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8561D3A509CEB6F1E752661F94081C7B /* Pods-mistigri_mob-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DB3CCF8E2CFAC5F9766BC8E9C958FBC /* Pods-mistigri_mob-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94F8A9C377B15EC56769A8EE9A49B6DF /* FloatingButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4CEF6E20D7BAECBC0D5349E4C3FCEC2 /* FloatingButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DDE9A4DCA7722B701E4BC61B2CD9D6E /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930DF1477185D2DD2966839E5E17F2E5 /* KeychainItemAccessibility.swift */; };
+		B4E163B75A887D2C7DB299439246C100 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C087296EECD929A7C4924C4112C8A9 /* FloatingButton.swift */; };
 		BFD960743F2B1CB1FA7B3808284DE99F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
-		C08F2CAB7110FB0C728549C2D5A96BD2 /* Pods-mistigri_mob-mistigri_mobUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 362D93FFD47A93AD6292C5E21CD41170 /* Pods-mistigri_mob-mistigri_mobUITests-dummy.m */; };
-		CA05084D970F9A48B7EC4F8027D386AB /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90894A7B02C423C20B852D5DF0087EE7 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCCFCDB26235AF88D2796246E5CF01E9 /* KeychainWrapperSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978FBAE6CB6A996846BA0E2B31F40161 /* KeychainWrapperSubscript.swift */; };
-		FA11E3BE0B2CE4AFC2E2C170509EA4A9 /* Pods-mistigri_mob-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DB3CCF8E2CFAC5F9766BC8E9C958FBC /* Pods-mistigri_mob-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2F0049573F99ACC889DDE97F8CD69C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		CA05084D970F9A48B7EC4F8027D386AB /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1000B9D6AB40BAE90A36ACA073077C5F /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCCFCDB26235AF88D2796246E5CF01E9 /* KeychainWrapperSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D46314218A3F05967C055B36082A6 /* KeychainWrapperSubscript.swift */; };
+		D82C59BE0A3E5D975021C59FBB4504C2 /* Pods-mistigri_mob-mistigri_mobUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 362D93FFD47A93AD6292C5E21CD41170 /* Pods-mistigri_mob-mistigri_mobUITests-dummy.m */; };
+		DCC2EDB23CD481002F057DE3DFC42E1A /* Pods-mistigri_mob-mistigri_mobUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21397F9EA2FA3DA0D7F3C0D207E2C054 /* Pods-mistigri_mob-mistigri_mobUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0EE9F4012D4E898A3031980D3817D2F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1FC749D4B4211948BD4C1AE152EEA /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2BA8C2D9246D8D44CDECE6D6DB04480E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF903DF43E111410ECA0C288D36FA21A;
-			remoteInfo = SwiftKeychainWrapper;
-		};
-		8DB45E9CB7EFCE551903B729C75F7A44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DF521AE3673A21429E7F0FD44294CEA;
-			remoteInfo = "Pods-mistigri_mob";
-		};
-		B91E10B6153403E963F38ADCED732BF2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CF903DF43E111410ECA0C288D36FA21A;
-			remoteInfo = SwiftKeychainWrapper;
-		};
-		BE5F608195890F49A4ABE69B18933276 /* PBXContainerItemProxy */ = {
+		05EF4B0041AB7747F4B1F0635B3F131B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
 			remoteInfo = SwiftLint;
 		};
-		ED31196CD72180077300DDB8344B9E3F /* PBXContainerItemProxy */ = {
+		485A4263D84B7154B2142464A5E0F802 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF903DF43E111410ECA0C288D36FA21A;
+			remoteInfo = SwiftKeychainWrapper;
+		};
+		7BD7151867A532A2C188CE8E7F492C0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F7F19FDF367800D08AD335C92FA4ADA;
+			remoteInfo = FloatingButton;
+		};
+		B7889EB835983609E728812B7DCB0E41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DF521AE3673A21429E7F0FD44294CEA;
+			remoteInfo = "Pods-mistigri_mob";
+		};
+		BC264D035D7E00533227C26F3F97CE9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F7F19FDF367800D08AD335C92FA4ADA;
+			remoteInfo = FloatingButton;
+		};
+		E8158433156E999ADD67195B6DB7A39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF903DF43E111410ECA0C288D36FA21A;
+			remoteInfo = SwiftKeychainWrapper;
+		};
+		F0552201C339CDE100FC562DCC557668 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -76,54 +95,72 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E85604B0D01FCF64D98459DAEBB8B1 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
 		0150B290D2281DDF17098B8259CD553E /* Pods-mistigri_mobTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mistigri_mobTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		018DE8B663B33C945653934B2A6679A6 /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
 		07F4CF763E9E4C76994D108B66BA0EB1 /* Pods-mistigri_mob-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mistigri_mob-acknowledgements.plist"; sourceTree = "<group>"; };
+		093D46314218A3F05967C055B36082A6 /* KeychainWrapperSubscript.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapperSubscript.swift; path = SwiftKeychainWrapper/KeychainWrapperSubscript.swift; sourceTree = "<group>"; };
+		1000B9D6AB40BAE90A36ACA073077C5F /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
 		21397F9EA2FA3DA0D7F3C0D207E2C054 /* Pods-mistigri_mob-mistigri_mobUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mistigri_mob-mistigri_mobUITests-umbrella.h"; sourceTree = "<group>"; };
+		28D7629CF01E3741A82707CF650349B2 /* FloatingButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FloatingButton-dummy.m"; sourceTree = "<group>"; };
+		29F83FA600E0812F6C5E651ABBFCDEE9 /* FloatingButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingButton-prefix.pch"; sourceTree = "<group>"; };
 		2E743F85C5D5D713D2966365D41D0B72 /* Pods-mistigri_mob-mistigri_mobUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mistigri_mob-mistigri_mobUITests-frameworks.sh"; sourceTree = "<group>"; };
-		33EE4551ADF33E9EECB8283E73D4A1DC /* SwiftKeychainWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.release.xcconfig; sourceTree = "<group>"; };
 		362D93FFD47A93AD6292C5E21CD41170 /* Pods-mistigri_mob-mistigri_mobUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mistigri_mob-mistigri_mobUITests-dummy.m"; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		395B58446B354D63ED01371A3325F775 /* Pods-mistigri_mobTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mistigri_mobTests-umbrella.h"; sourceTree = "<group>"; };
 		3A33787AC3E08F7BCEEACD0B92AFD2FD /* Pods-mistigri_mob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mistigri_mob.release.xcconfig"; sourceTree = "<group>"; };
-		3E3E7C47A77F6C4F04227DECAD04A159 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
+		3CEBD8005B77FB84D6349F467F70F320 /* SwiftKeychainWrapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftKeychainWrapper-Info.plist"; sourceTree = "<group>"; };
 		450A916250BC1905651308F925AF6991 /* Pods-mistigri_mob-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mistigri_mob-frameworks.sh"; sourceTree = "<group>"; };
 		45971FEB3819FA0630B606AD2970CB4C /* Pods-mistigri_mob */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-mistigri_mob"; path = Pods_mistigri_mob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49CDA7EEB1F32B0A8FB432314C4D24EA /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
 		4ADA195AC595A065BF728ABC626ECC44 /* Pods-mistigri_mobTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mistigri_mobTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50FD830D466DF07B051BA0CF891F7484 /* FloatingButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FloatingButton.modulemap; sourceTree = "<group>"; };
 		55AEF3F0041920E31E03F39A0CB833A4 /* Pods-mistigri_mobTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mistigri_mobTests.modulemap"; sourceTree = "<group>"; };
 		568B4B6562C2DFE65CBCF97F5B272188 /* Pods-mistigri_mobTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mistigri_mobTests.release.xcconfig"; sourceTree = "<group>"; };
+		56F59E8E9C83C0817DACB160D9FF1E51 /* SwiftKeychainWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.release.xcconfig; sourceTree = "<group>"; };
 		6B2CA3C72BE596918AB1AFFC3B310CC9 /* Pods-mistigri_mob-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mistigri_mob-dummy.m"; sourceTree = "<group>"; };
 		6C5D24C4F80DFB098DA9588EC97DA0CC /* Pods-mistigri_mobTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-mistigri_mobTests"; path = Pods_mistigri_mobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3D009ECD427D7D5C4695F40F4ED947 /* Pods-mistigri_mob-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mistigri_mob-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6DB3CCF8E2CFAC5F9766BC8E9C958FBC /* Pods-mistigri_mob-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mistigri_mob-umbrella.h"; sourceTree = "<group>"; };
-		6E8879EF7ED927CFA1CCD4482F0510B4 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
-		715C9FAFDE48FF4E1A41F97463602006 /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
+		74ECE4FC5A13FDFDF40DDC4A25D8DDD9 /* SwiftKeychainWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.debug.xcconfig; sourceTree = "<group>"; };
+		76973AA5D9CDC7CEB66E0552800A6312 /* FloatingButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingButton.release.xcconfig; sourceTree = "<group>"; };
+		7E8A0C6752D9D9FFB9FDC1AC5A2E2695 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
 		80B9EA3CEC577086148E26B2813D0AA2 /* Pods-mistigri_mob-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mistigri_mob-Info.plist"; sourceTree = "<group>"; };
 		81F9E963EE7E48C888243A3931732E18 /* Pods-mistigri_mobTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mistigri_mobTests-Info.plist"; sourceTree = "<group>"; };
-		87DE1BFEF84DEC6D7B6D3D88C99D287B /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
-		90894A7B02C423C20B852D5DF0087EE7 /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
-		978FBAE6CB6A996846BA0E2B31F40161 /* KeychainWrapperSubscript.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapperSubscript.swift; path = SwiftKeychainWrapper/KeychainWrapperSubscript.swift; sourceTree = "<group>"; };
+		930DF1477185D2DD2966839E5E17F2E5 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		99E124B83542CC34D607B8C9BB5270FF /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E732AA310B027DE9F54939ED1070C81 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
 		9EF5DA84B2F4EC07C0C43B70CB536F8B /* Pods-mistigri_mob-mistigri_mobUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mistigri_mob-mistigri_mobUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A9177B1064973E1936EEEA889E70D1D3 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		A99DCB3E786EB9ADCB1FBF7D8E9A56CF /* Pods-mistigri_mob-mistigri_mobUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mistigri_mob-mistigri_mobUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AC9971364A36E8C0A4E6B728AE55A572 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
 		B6A757D05A5BDF1E27E60657C868B385 /* Pods-mistigri_mob-mistigri_mobUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mistigri_mob-mistigri_mobUITests-Info.plist"; sourceTree = "<group>"; };
+		B7C17D747CDA3DF826D6908720E10432 /* FloatingButton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FloatingButton; path = FloatingButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89F70410AA35B043D25FF47F8453814 /* Pods-mistigri_mob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mistigri_mob.debug.xcconfig"; sourceTree = "<group>"; };
+		BDEFE94FFA8E43C40BAFB4314D2D62B3 /* FloatingButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FloatingButton-Info.plist"; sourceTree = "<group>"; };
+		C25A1D6C8A8649A0AACA75F2AA5BB526 /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
 		C2F91825CD0969F6D4CB8AA176FBAEC2 /* Pods-mistigri_mobTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mistigri_mobTests-dummy.m"; sourceTree = "<group>"; };
 		C53D1B2B175C3408830D004E8B84B0E5 /* Pods-mistigri_mob.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mistigri_mob.modulemap"; sourceTree = "<group>"; };
-		CFB0B9F424F7178CDAEB768A996838C8 /* SwiftKeychainWrapper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftKeychainWrapper-Info.plist"; sourceTree = "<group>"; };
+		C7D1FC749D4B4211948BD4C1AE152EEA /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/FloatingButton/Utils.swift; sourceTree = "<group>"; };
+		D4CEF6E20D7BAECBC0D5349E4C3FCEC2 /* FloatingButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FloatingButton-umbrella.h"; sourceTree = "<group>"; };
 		DECD7B2CAF080AE2466461966D7EABE1 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DFCDE80D3CBD2328B850FE3B51838F0D /* Pods-mistigri_mob-mistigri_mobUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mistigri_mob-mistigri_mobUITests.modulemap"; sourceTree = "<group>"; };
-		EE54E9E5104E50DCB4D46BE3548B66DF /* SwiftKeychainWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.debug.xcconfig; sourceTree = "<group>"; };
+		E3C087296EECD929A7C4924C4112C8A9 /* FloatingButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingButton.swift; path = Sources/FloatingButton/FloatingButton.swift; sourceTree = "<group>"; };
+		E6ADE5F83A963DE98165EAC188C1F3A4 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
+		E6CE6F0012124AEBC5A6FF923CF8873C /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
+		EBAB147244A1E8AA9026D25501A6A6B9 /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
 		EE91AA49B3E071BA972E9052DDF02B72 /* Pods-mistigri_mobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mistigri_mobTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F10B91AAE29B3BDAFCD2ED9DFBC7BB09 /* FloatingButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FloatingButton.debug.xcconfig; sourceTree = "<group>"; };
 		F1536171A24D4823D0A1AD2496191E8F /* Pods-mistigri_mob-mistigri_mobUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-mistigri_mob-mistigri_mobUITests"; path = Pods_mistigri_mob_mistigri_mobUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		586AB82A216BE93E351CACC387213BA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				245A898F12A272C39FAE6DEE0248AFFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77F734391D75F1987030901E0FC31DE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,11 +169,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC9173B9662F9BFFBFF22FDBFCF5E305 /* Frameworks */ = {
+		C83B9DFE2A16B973E5383614F79B9EB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59FD9E1576CC84B4E7F75B9AB22DAAC3 /* Foundation.framework in Frameworks */,
+				C2F0049573F99ACC889DDE97F8CD69C6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,58 +185,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D67DF2203ABE5B2E760E52E2701C0AA8 /* Frameworks */ = {
+		E68480444690444E0DD742200F41966A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90494D4E207435ED9C5C10768A88D335 /* Foundation.framework in Frameworks */,
+				78DB208EFF86C7A4F9F5FF7AC65815FF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26298F96AF9BE8B0BE0FD9650785F0D8 /* Support Files */ = {
+		37FDA88240BE3210EC97DD1239D44F79 /* FloatingButton */ = {
 			isa = PBXGroup;
 			children = (
-				018DE8B663B33C945653934B2A6679A6 /* SwiftKeychainWrapper.modulemap */,
-				3E3E7C47A77F6C4F04227DECAD04A159 /* SwiftKeychainWrapper-dummy.m */,
-				CFB0B9F424F7178CDAEB768A996838C8 /* SwiftKeychainWrapper-Info.plist */,
-				715C9FAFDE48FF4E1A41F97463602006 /* SwiftKeychainWrapper-prefix.pch */,
-				90894A7B02C423C20B852D5DF0087EE7 /* SwiftKeychainWrapper-umbrella.h */,
-				EE54E9E5104E50DCB4D46BE3548B66DF /* SwiftKeychainWrapper.debug.xcconfig */,
-				33EE4551ADF33E9EECB8283E73D4A1DC /* SwiftKeychainWrapper.release.xcconfig */,
+				E3C087296EECD929A7C4924C4112C8A9 /* FloatingButton.swift */,
+				C7D1FC749D4B4211948BD4C1AE152EEA /* Utils.swift */,
+				3A002D76B88073EFC5450942B6F04CCD /* Support Files */,
+			);
+			name = FloatingButton;
+			path = FloatingButton;
+			sourceTree = "<group>";
+		};
+		3A002D76B88073EFC5450942B6F04CCD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				50FD830D466DF07B051BA0CF891F7484 /* FloatingButton.modulemap */,
+				28D7629CF01E3741A82707CF650349B2 /* FloatingButton-dummy.m */,
+				BDEFE94FFA8E43C40BAFB4314D2D62B3 /* FloatingButton-Info.plist */,
+				29F83FA600E0812F6C5E651ABBFCDEE9 /* FloatingButton-prefix.pch */,
+				D4CEF6E20D7BAECBC0D5349E4C3FCEC2 /* FloatingButton-umbrella.h */,
+				F10B91AAE29B3BDAFCD2ED9DFBC7BB09 /* FloatingButton.debug.xcconfig */,
+				76973AA5D9CDC7CEB66E0552800A6312 /* FloatingButton.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/SwiftKeychainWrapper";
-			sourceTree = "<group>";
-		};
-		2718DABBEFFB90B724C9F149738216FB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				668A7B9ABD8862B8BAA7A77245A95B40 /* SwiftKeychainWrapper */,
-				42A9C32B025D75C713733B5AC0B972D4 /* SwiftLint */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		42A9C32B025D75C713733B5AC0B972D4 /* SwiftLint */ = {
-			isa = PBXGroup;
-			children = (
-				4343F5488BE2D028F5A906CE1B984116 /* Support Files */,
-			);
-			name = SwiftLint;
-			path = SwiftLint;
-			sourceTree = "<group>";
-		};
-		4343F5488BE2D028F5A906CE1B984116 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AC9971364A36E8C0A4E6B728AE55A572 /* SwiftLint.debug.xcconfig */,
-				6E8879EF7ED927CFA1CCD4482F0510B4 /* SwiftLint.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftLint";
+			path = "../Target Support Files/FloatingButton";
 			sourceTree = "<group>";
 		};
 		55EE559F3213877702BA1D3BA69F1183 /* Pods-mistigri_mob */ = {
@@ -236,19 +256,6 @@
 			path = "Target Support Files/Pods-mistigri_mob-mistigri_mobUITests";
 			sourceTree = "<group>";
 		};
-		668A7B9ABD8862B8BAA7A77245A95B40 /* SwiftKeychainWrapper */ = {
-			isa = PBXGroup;
-			children = (
-				87DE1BFEF84DEC6D7B6D3D88C99D287B /* KeychainItemAccessibility.swift */,
-				49CDA7EEB1F32B0A8FB432314C4D24EA /* KeychainWrapper.swift */,
-				978FBAE6CB6A996846BA0E2B31F40161 /* KeychainWrapperSubscript.swift */,
-				00E85604B0D01FCF64D98459DAEBB8B1 /* SwiftKeychainWrapper.h */,
-				26298F96AF9BE8B0BE0FD9650785F0D8 /* Support Files */,
-			);
-			name = SwiftKeychainWrapper;
-			path = SwiftKeychainWrapper;
-			sourceTree = "<group>";
-		};
 		78BD7D5C9A45BE5AA9BAD6D99176B3B5 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,15 +266,38 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9561B521873BAB3CF0C94B0F0240714A /* Products */ = {
+		943DC5BF68789D6F63313A0074F72066 /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
-				45971FEB3819FA0630B606AD2970CB4C /* Pods-mistigri_mob */,
-				F1536171A24D4823D0A1AD2496191E8F /* Pods-mistigri_mob-mistigri_mobUITests */,
-				6C5D24C4F80DFB098DA9588EC97DA0CC /* Pods-mistigri_mobTests */,
-				5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper */,
+				CC7FD335219BA625F4BAE2BD7678377D /* Support Files */,
 			);
-			name = Products;
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		947E8C138A95A616DA46CC577344CD92 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C25A1D6C8A8649A0AACA75F2AA5BB526 /* SwiftKeychainWrapper.modulemap */,
+				E6ADE5F83A963DE98165EAC188C1F3A4 /* SwiftKeychainWrapper-dummy.m */,
+				3CEBD8005B77FB84D6349F467F70F320 /* SwiftKeychainWrapper-Info.plist */,
+				EBAB147244A1E8AA9026D25501A6A6B9 /* SwiftKeychainWrapper-prefix.pch */,
+				1000B9D6AB40BAE90A36ACA073077C5F /* SwiftKeychainWrapper-umbrella.h */,
+				74ECE4FC5A13FDFDF40DDC4A25D8DDD9 /* SwiftKeychainWrapper.debug.xcconfig */,
+				56F59E8E9C83C0817DACB160D9FF1E51 /* SwiftKeychainWrapper.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftKeychainWrapper";
+			sourceTree = "<group>";
+		};
+		B0DF4040CBD4B324512968086BDA98BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37FDA88240BE3210EC97DD1239D44F79 /* FloatingButton */,
+				E4F8C68F305A8207E0980AC6EA14AA07 /* SwiftKeychainWrapper */,
+				943DC5BF68789D6F63313A0074F72066 /* SwiftLint */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C458DC94EE5F203F51F2CA50FA54DB41 /* Pods-mistigri_mobTests */ = {
@@ -286,13 +316,23 @@
 			path = "Target Support Files/Pods-mistigri_mobTests";
 			sourceTree = "<group>";
 		};
+		CC7FD335219BA625F4BAE2BD7678377D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E732AA310B027DE9F54939ED1070C81 /* SwiftLint.debug.xcconfig */,
+				A9177B1064973E1936EEEA889E70D1D3 /* SwiftLint.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				2718DABBEFFB90B724C9F149738216FB /* Pods */,
-				9561B521873BAB3CF0C94B0F0240714A /* Products */,
+				B0DF4040CBD4B324512968086BDA98BA /* Pods */,
+				FC40272ABB683C4E7778843A6C51E50C /* Products */,
 				78BD7D5C9A45BE5AA9BAD6D99176B3B5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -313,15 +353,56 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		E4F8C68F305A8207E0980AC6EA14AA07 /* SwiftKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				930DF1477185D2DD2966839E5E17F2E5 /* KeychainItemAccessibility.swift */,
+				7E8A0C6752D9D9FFB9FDC1AC5A2E2695 /* KeychainWrapper.swift */,
+				093D46314218A3F05967C055B36082A6 /* KeychainWrapperSubscript.swift */,
+				E6CE6F0012124AEBC5A6FF923CF8873C /* SwiftKeychainWrapper.h */,
+				947E8C138A95A616DA46CC577344CD92 /* Support Files */,
+			);
+			name = SwiftKeychainWrapper;
+			path = SwiftKeychainWrapper;
+			sourceTree = "<group>";
+		};
+		FC40272ABB683C4E7778843A6C51E50C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7C17D747CDA3DF826D6908720E10432 /* FloatingButton */,
+				45971FEB3819FA0630B606AD2970CB4C /* Pods-mistigri_mob */,
+				F1536171A24D4823D0A1AD2496191E8F /* Pods-mistigri_mob-mistigri_mobUITests */,
+				6C5D24C4F80DFB098DA9588EC97DA0CC /* Pods-mistigri_mobTests */,
+				5069D199AB328CCD047E61C632CD7C32 /* SwiftKeychainWrapper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0097DC08BC44CA532F4675B69573E1CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94F8A9C377B15EC56769A8EE9A49B6DF /* FloatingButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00DCBAC6F7586C0697AB5CCD474E5060 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7BB7EA40D98983D92AB8521EC43AC6D2 /* SwiftKeychainWrapper.h in Headers */,
 				CA05084D970F9A48B7EC4F8027D386AB /* SwiftKeychainWrapper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10C4ACCE06319BCAA9DE4D13F94C7675 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC2EDB23CD481002F057DE3DFC42E1A /* Pods-mistigri_mob-mistigri_mobUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,19 +414,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A31CAABBFF27F06E1A4089483DAAC096 /* Headers */ = {
+		D45FEE4E702DE3C8A09A3829766B280E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA11E3BE0B2CE4AFC2E2C170509EA4A9 /* Pods-mistigri_mob-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE04936EEF69A26FBA5B9A6851B9CDC9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78FF304C7143B6CDCFE6EAAB3AB4467C /* Pods-mistigri_mob-mistigri_mobUITests-umbrella.h in Headers */,
+				8561D3A509CEB6F1E752661F94081C7B /* Pods-mistigri_mob-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,38 +427,58 @@
 /* Begin PBXNativeTarget section */
 		6ADCB4402991F97B3F7DEC0F034FEDA9 /* Pods-mistigri_mob-mistigri_mobUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD64D992C5EA22C1FCE1B8006F803E38 /* Build configuration list for PBXNativeTarget "Pods-mistigri_mob-mistigri_mobUITests" */;
+			buildConfigurationList = 888D3036BAA49D5DD7EC5565361C8D29 /* Build configuration list for PBXNativeTarget "Pods-mistigri_mob-mistigri_mobUITests" */;
 			buildPhases = (
-				FE04936EEF69A26FBA5B9A6851B9CDC9 /* Headers */,
-				467A68E22C01C413BA7F9905F3D7CB35 /* Sources */,
-				AC9173B9662F9BFFBFF22FDBFCF5E305 /* Frameworks */,
-				9237EE8F265BC14FD7D4EE2E1ABF2928 /* Resources */,
+				10C4ACCE06319BCAA9DE4D13F94C7675 /* Headers */,
+				09E8CBCFB73E8A832727452E3F51D890 /* Sources */,
+				586AB82A216BE93E351CACC387213BA1 /* Frameworks */,
+				B0BF00D0588DD2562AA9F826A3E500A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F388AB16F47D5812838A52D9AD603070 /* PBXTargetDependency */,
-				3C4581AA43C9BDED054DD3A078E9E91D /* PBXTargetDependency */,
+				B90D67C362AA3175629771D7A6110870 /* PBXTargetDependency */,
+				FD935511F036D2E49D5AC99AF027DFEB /* PBXTargetDependency */,
+				B1D528BEB53E9E6D13CB467FCAC1BA3A /* PBXTargetDependency */,
 			);
 			name = "Pods-mistigri_mob-mistigri_mobUITests";
 			productName = Pods_mistigri_mob_mistigri_mobUITests;
 			productReference = F1536171A24D4823D0A1AD2496191E8F /* Pods-mistigri_mob-mistigri_mobUITests */;
 			productType = "com.apple.product-type.framework";
 		};
-		8DF521AE3673A21429E7F0FD44294CEA /* Pods-mistigri_mob */ = {
+		6F7F19FDF367800D08AD335C92FA4ADA /* FloatingButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC601BB785BB7CF23072C6CB463BE853 /* Build configuration list for PBXNativeTarget "Pods-mistigri_mob" */;
+			buildConfigurationList = AE110E26B42DFE9F19DFD3A3F35E01F4 /* Build configuration list for PBXNativeTarget "FloatingButton" */;
 			buildPhases = (
-				A31CAABBFF27F06E1A4089483DAAC096 /* Headers */,
-				4E36DC9D88EB4079A37AC8018CBD0C42 /* Sources */,
-				D67DF2203ABE5B2E760E52E2701C0AA8 /* Frameworks */,
-				C9C61FA86EFD8A2987C7EABCB5CA89E7 /* Resources */,
+				0097DC08BC44CA532F4675B69573E1CE /* Headers */,
+				556D1F2D3EFF6738508A6828EC31FB8F /* Sources */,
+				E68480444690444E0DD742200F41966A /* Frameworks */,
+				D520C566704C35B5464F47614706663B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				49F6EE2C239EBAADAA2E7B64CC18320A /* PBXTargetDependency */,
-				BFCC9DDDE67732939F24BE2812381FB0 /* PBXTargetDependency */,
+			);
+			name = FloatingButton;
+			productName = FloatingButton;
+			productReference = B7C17D747CDA3DF826D6908720E10432 /* FloatingButton */;
+			productType = "com.apple.product-type.framework";
+		};
+		8DF521AE3673A21429E7F0FD44294CEA /* Pods-mistigri_mob */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EE39CD4A77871E892B607A5F6ADC951 /* Build configuration list for PBXNativeTarget "Pods-mistigri_mob" */;
+			buildPhases = (
+				D45FEE4E702DE3C8A09A3829766B280E /* Headers */,
+				136D4486F25C509BA35E254DC0CD090C /* Sources */,
+				C83B9DFE2A16B973E5383614F79B9EB2 /* Frameworks */,
+				3D3F901EEFB89BDA4AD3F7900D76BC16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F42A61B194766CF45D9D2DCB06BD388C /* PBXTargetDependency */,
+				CB95966010EB3FBD44DB949EC38D2D38 /* PBXTargetDependency */,
+				BBEE677713DF87366162EDFD1356A05D /* PBXTargetDependency */,
 			);
 			name = "Pods-mistigri_mob";
 			productName = Pods_mistigri_mob;
@@ -404,7 +497,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1396037F5B3BAB30F6C9AE884737FCAA /* PBXTargetDependency */,
+				7F0E2BF3531ECFE7E11DD8432AB1EED2 /* PBXTargetDependency */,
 			);
 			name = "Pods-mistigri_mobTests";
 			productName = Pods_mistigri_mobTests;
@@ -449,10 +542,11 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9561B521873BAB3CF0C94B0F0240714A /* Products */;
+			productRefGroup = FC40272ABB683C4E7778843A6C51E50C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				6F7F19FDF367800D08AD335C92FA4ADA /* FloatingButton */,
 				8DF521AE3673A21429E7F0FD44294CEA /* Pods-mistigri_mob */,
 				6ADCB4402991F97B3F7DEC0F034FEDA9 /* Pods-mistigri_mob-mistigri_mobUITests */,
 				8E903E4C88FB1D085D1D7A891F6F21B3 /* Pods-mistigri_mobTests */,
@@ -463,7 +557,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9237EE8F265BC14FD7D4EE2E1ABF2928 /* Resources */ = {
+		3D3F901EEFB89BDA4AD3F7900D76BC16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0BF00D0588DD2562AA9F826A3E500A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -477,7 +578,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9C61FA86EFD8A2987C7EABCB5CA89E7 /* Resources */ = {
+		D520C566704C35B5464F47614706663B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -494,19 +595,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		467A68E22C01C413BA7F9905F3D7CB35 /* Sources */ = {
+		09E8CBCFB73E8A832727452E3F51D890 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08F2CAB7110FB0C728549C2D5A96BD2 /* Pods-mistigri_mob-mistigri_mobUITests-dummy.m in Sources */,
+				D82C59BE0A3E5D975021C59FBB4504C2 /* Pods-mistigri_mob-mistigri_mobUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E36DC9D88EB4079A37AC8018CBD0C42 /* Sources */ = {
+		136D4486F25C509BA35E254DC0CD090C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B900878A214C72DF2736E38C159D73BF /* Pods-mistigri_mob-dummy.m in Sources */,
+				75824956692ED7ABC8CB640A24554231 /* Pods-mistigri_mob-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		556D1F2D3EFF6738508A6828EC31FB8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4E163B75A887D2C7DB299439246C100 /* FloatingButton.swift in Sources */,
+				40E3E8992FA41D95D9F88FE530CDEB3B /* FloatingButton-dummy.m in Sources */,
+				E0EE9F4012D4E898A3031980D3817D2F /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,35 +643,47 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1396037F5B3BAB30F6C9AE884737FCAA /* PBXTargetDependency */ = {
+		7F0E2BF3531ECFE7E11DD8432AB1EED2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-mistigri_mob";
 			target = 8DF521AE3673A21429E7F0FD44294CEA /* Pods-mistigri_mob */;
-			targetProxy = 8DB45E9CB7EFCE551903B729C75F7A44 /* PBXContainerItemProxy */;
+			targetProxy = B7889EB835983609E728812B7DCB0E41 /* PBXContainerItemProxy */;
 		};
-		3C4581AA43C9BDED054DD3A078E9E91D /* PBXTargetDependency */ = {
+		B1D528BEB53E9E6D13CB467FCAC1BA3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = ED31196CD72180077300DDB8344B9E3F /* PBXContainerItemProxy */;
+			targetProxy = 05EF4B0041AB7747F4B1F0635B3F131B /* PBXContainerItemProxy */;
 		};
-		49F6EE2C239EBAADAA2E7B64CC18320A /* PBXTargetDependency */ = {
+		B90D67C362AA3175629771D7A6110870 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftKeychainWrapper;
-			target = CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */;
-			targetProxy = 2BA8C2D9246D8D44CDECE6D6DB04480E /* PBXContainerItemProxy */;
+			name = FloatingButton;
+			target = 6F7F19FDF367800D08AD335C92FA4ADA /* FloatingButton */;
+			targetProxy = 7BD7151867A532A2C188CE8E7F492C0A /* PBXContainerItemProxy */;
 		};
-		BFCC9DDDE67732939F24BE2812381FB0 /* PBXTargetDependency */ = {
+		BBEE677713DF87366162EDFD1356A05D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftLint;
 			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = BE5F608195890F49A4ABE69B18933276 /* PBXContainerItemProxy */;
+			targetProxy = F0552201C339CDE100FC562DCC557668 /* PBXContainerItemProxy */;
 		};
-		F388AB16F47D5812838A52D9AD603070 /* PBXTargetDependency */ = {
+		CB95966010EB3FBD44DB949EC38D2D38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftKeychainWrapper;
 			target = CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */;
-			targetProxy = B91E10B6153403E963F38ADCED732BF2 /* PBXContainerItemProxy */;
+			targetProxy = 485A4263D84B7154B2142464A5E0F802 /* PBXContainerItemProxy */;
+		};
+		F42A61B194766CF45D9D2DCB06BD388C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FloatingButton;
+			target = 6F7F19FDF367800D08AD335C92FA4ADA /* FloatingButton */;
+			targetProxy = BC264D035D7E00533227C26F3F97CE9B /* PBXContainerItemProxy */;
+		};
+		FD935511F036D2E49D5AC99AF027DFEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftKeychainWrapper;
+			target = CF903DF43E111410ECA0C288D36FA21A /* SwiftKeychainWrapper */;
+			targetProxy = E8158433156E999ADD67195B6DB7A39A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -604,9 +727,48 @@
 			};
 			name = Debug;
 		};
+		0F3A7E9B173DFC78150A76EF5DF2233E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F10B91AAE29B3BDAFCD2ED9DFBC7BB09 /* FloatingButton.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingButton/FloatingButton-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/FloatingButton/FloatingButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingButton/FloatingButton.modulemap";
+				PRODUCT_MODULE_NAME = FloatingButton;
+				PRODUCT_NAME = FloatingButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		164D234316F4A7814C5F4348E0FD7C5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE54E9E5104E50DCB4D46BE3548B66DF /* SwiftKeychainWrapper.debug.xcconfig */;
+			baseConfigurationReference = 74ECE4FC5A13FDFDF40DDC4A25D8DDD9 /* SwiftKeychainWrapper.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -642,47 +804,7 @@
 			};
 			name = Debug;
 		};
-		454113FBEA1E3D56E12F38D1F0C4CD04 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A33787AC3E08F7BCEEACD0B92AFD2FD /* Pods-mistigri_mob.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4B08FC4936D58B711DD8EDEDFEE266DA /* Debug */ = {
+		521701A47F33130E6E8BAF690C6E17FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B89F70410AA35B043D25FF47F8453814 /* Pods-mistigri_mob.debug.xcconfig */;
 			buildSettings = {
@@ -723,7 +845,7 @@
 		};
 		59619FF05234376C3EAC921AE49A2A96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC9971364A36E8C0A4E6B728AE55A572 /* SwiftLint.debug.xcconfig */;
+			baseConfigurationReference = 9E732AA310B027DE9F54939ED1070C81 /* SwiftLint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -739,9 +861,9 @@
 			};
 			name = Debug;
 		};
-		96BFBD33A83FA9B672C42560F6C92854 /* Release */ = {
+		69884A95D8E05727E3937C1F9C034D4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DECD7B2CAF080AE2466461966D7EABE1 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */;
+			baseConfigurationReference = 99E124B83542CC34D607B8C9BB5270FF /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -773,11 +895,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		B86D71A5E7AB53EB2C08DEA39FBD2050 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -947,9 +1068,49 @@
 			};
 			name = Debug;
 		};
+		BF60787114EA1C536331E8001D864C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76973AA5D9CDC7CEB66E0552800A6312 /* FloatingButton.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/FloatingButton/FloatingButton-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/FloatingButton/FloatingButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FloatingButton/FloatingButton.modulemap";
+				PRODUCT_MODULE_NAME = FloatingButton;
+				PRODUCT_NAME = FloatingButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C1238B6F45B99CBFA2DE1E81C06F98A2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33EE4551ADF33E9EECB8283E73D4A1DC /* SwiftKeychainWrapper.release.xcconfig */;
+			baseConfigurationReference = 56F59E8E9C83C0817DACB160D9FF1E51 /* SwiftKeychainWrapper.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -986,9 +1147,68 @@
 			};
 			name = Release;
 		};
-		D2D86349432A365F23E8476115324D8C /* Debug */ = {
+		D5836E1CB6436DF3AB51A8D28A6AFCAD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99E124B83542CC34D607B8C9BB5270FF /* Pods-mistigri_mob-mistigri_mobUITests.debug.xcconfig */;
+			baseConfigurationReference = 3A33787AC3E08F7BCEEACD0B92AFD2FD /* Pods-mistigri_mob.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mistigri_mob/Pods-mistigri_mob.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D834AEAA334DEA04A1BF19DFA0DD207F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9177B1064973E1936EEEA889E70D1D3 /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F60281C8E83B8E280AFCCB6A52CE9EAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DECD7B2CAF080AE2466461966D7EABE1 /* Pods-mistigri_mob-mistigri_mobUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1020,27 +1240,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D834AEAA334DEA04A1BF19DFA0DD207F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E8879EF7ED927CFA1CCD4482F0510B4 /* SwiftLint.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -1074,11 +1276,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC601BB785BB7CF23072C6CB463BE853 /* Build configuration list for PBXNativeTarget "Pods-mistigri_mob" */ = {
+		7EE39CD4A77871E892B607A5F6ADC951 /* Build configuration list for PBXNativeTarget "Pods-mistigri_mob" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B08FC4936D58B711DD8EDEDFEE266DA /* Debug */,
-				454113FBEA1E3D56E12F38D1F0C4CD04 /* Release */,
+				521701A47F33130E6E8BAF690C6E17FC /* Debug */,
+				D5836E1CB6436DF3AB51A8D28A6AFCAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		888D3036BAA49D5DD7EC5565361C8D29 /* Build configuration list for PBXNativeTarget "Pods-mistigri_mob-mistigri_mobUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69884A95D8E05727E3937C1F9C034D4A /* Debug */,
+				F60281C8E83B8E280AFCCB6A52CE9EAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE110E26B42DFE9F19DFD3A3F35E01F4 /* Build configuration list for PBXNativeTarget "FloatingButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F3A7E9B173DFC78150A76EF5DF2233E /* Debug */,
+				BF60787114EA1C536331E8001D864C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1088,15 +1308,6 @@
 			buildConfigurations = (
 				59619FF05234376C3EAC921AE49A2A96 /* Debug */,
 				D834AEAA334DEA04A1BF19DFA0DD207F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BD64D992C5EA22C1FCE1B8006F803E38 /* Build configuration list for PBXNativeTarget "Pods-mistigri_mob-mistigri_mobUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2D86349432A365F23E8476115324D8C /* Debug */,
-				96BFBD33A83FA9B672C42560F6C92854 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

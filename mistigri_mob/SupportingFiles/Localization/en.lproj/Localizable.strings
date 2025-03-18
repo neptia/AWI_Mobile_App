@@ -41,3 +41,11 @@
 "SelectGame.Text.Title"="Select a game";
 "SelectSeller.Text.Title"="Select a seller";
 "All.Text.Title"="All";
+"SearchBarcode.Text.Title"="Search a barcode";
+"customerEmail.Text.Title"="Customer Email";
+"FStatement.Text.Title"="Financial Statement";
+"Stocks.Text.Title"="Stocks";
+"AccMGT.Text.Title"="Account Management";
+"Sessions.Text.Title"="Sessions";
+"Recovery.Text.Title"="Recovery";
+"Fees.Text.Title"="Configure Fees";

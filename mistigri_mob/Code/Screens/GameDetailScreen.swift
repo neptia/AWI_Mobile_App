@@ -12,6 +12,7 @@ struct GameDetailScreen: View {
     @State private var selectedPrice: String = "SelectPrice.Text.Title".localized
     @State private var gamePrices: [GamePricesResponseData] = []
     @StateObject var viewModel: GameViewModel
+    @State var selectedGame: GamePricesResponseData = GamePricesResponseData(unitPrice: 0.0, name: "", seller_id: "", barcode_id: "", comment: "", state: "")
 
     var body: some View {
         Color.CFFF8F7
@@ -26,6 +27,7 @@ struct GameDetailScreen: View {
                             ForEach(gamePrices, id: \.barcode_id) { game in
                                 Button(String(game.unitPrice)) {
                                     selectedPrice = String(game.unitPrice)
+                                    selectedGame = game
                                 }
                             }
                         } label: {
@@ -36,7 +38,8 @@ struct GameDetailScreen: View {
                         }.padding(.trailing,20)
                         VStack(alignment:.leading) {
                             GameDetailView(game: game)
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+                            Text("\(selectedGame.state) | ")
+                            Text(selectedGame.comment ?? "")
                                 .font(.footnote)
                                 .padding(.top, 10)
                                 .padding(.trailing, 20)

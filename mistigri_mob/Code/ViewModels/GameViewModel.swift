@@ -9,6 +9,7 @@ import Foundation
 
 class GameViewModel: ObservableObject {
     @Published var games: [GameResponseData] = [] // Store the games
+    @Published var barcodes: [BarcodeResponseData] = [] // Store the barcodes
     @Published var gamePrices: [GamePricesResponseData] = []
     @Published var isLoading = false
     @Published var game_id: String = ""
@@ -88,6 +89,29 @@ class GameViewModel: ObservableObject {
         }, onError: { error in
             print(error)
         })
+    }
+
+    // Fetch all barcodes
+    func fetchAllBarcodes(completion: @escaping () -> Void) {
+        let fetchAction = FetchAllBarcodesAction()
+        fetchAction.call(onSuccess: { barcodes in
+            DispatchQueue.main.async {
+                self.barcodes = barcodes
+                completion()
+            }
+        }, onError: { error in
+            // Handle the error, maybe set a message or alert
+            print(error)
+        })
+    }
+
+    // Function to filter barcodes based on the search text
+    func filteredBarcodes(searchText: String) -> [BarcodeResponseData] {
+        if searchText.isEmpty {
+            return []
+        } else {
+            return barcodes.filter { $0.barcode_id.localizedCaseInsensitiveContains(searchText) }
+        }
     }
 
 }

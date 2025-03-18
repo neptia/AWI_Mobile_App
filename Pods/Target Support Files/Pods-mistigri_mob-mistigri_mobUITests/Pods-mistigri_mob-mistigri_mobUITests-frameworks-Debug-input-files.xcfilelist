@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-mistigri_mob-mistigri_mobUITests/Pods-mistigri_mob-mistigri_mobUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FloatingButton/FloatingButton.framework
 ${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework
