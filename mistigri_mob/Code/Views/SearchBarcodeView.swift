@@ -19,13 +19,13 @@ struct SearchBarcodeView: View {
     }
 
     var body: some View {
-        VStack {
+        VStack (alignment: .leading) {
             HStack {
                 TextField("SearchBarcode.Text.Title".localized, text: $searchText, onEditingChanged: { isEditing in
                     showSuggestion = searchText.isEmpty
                 })
                 .padding()
-                .background(Color(.systemGray6))
+                .background(Color.CFFDC9A.opacity(0.35))
                 .cornerRadius(8)
                 .focused($isTextFieldFocused)
                 .onSubmit {
@@ -40,7 +40,7 @@ struct SearchBarcodeView: View {
                 if !searchText.isEmpty {
                     Button(action: clearSearch) {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(.gray)
+                            .foregroundColor(Color(hex: "fdd3d0"))
                     }
                     .padding(.trailing, 8)
                 }
@@ -66,4 +66,8 @@ struct SearchBarcodeView: View {
         isTextFieldFocused = false
     }
 
+}
+
+#Preview {
+    SearchBarcodeView(checkoutVM: CheckoutViewModel())
 }

@@ -28,15 +28,27 @@ struct MockDataDashBoard {
         "widget.small.badge.plus",
         "person.fill.badge.plus"
     ]
+
+    static let destinationNames: [AnyView] = [
+        AnyView(CreateNewGameScreen()),
+        AnyView(CreateNewGameScreen())
+    ]
+
 }
 
 struct DashboardScreen: View {
     @ObservedObject var alertManager = AlertManager()
     @ObservedObject var dashboardVM: DashboardViewModel = DashboardViewModel()
     @State var isOpen = false
+
+    let destinations: [AnyView] = [
+        AnyView(CreateNewGameScreen()),
+        AnyView(CreateNewGameScreen())
+    ]
+
     let mainButton = MainButton(imageName: "plus", colorHex: "ffaedb")
     let buttonsImage = MockDataDashBoard.iconImageNames.enumerated().map { index, value in
-        IconButton(imageName: value, color: MockDataDashBoard.colors[index])
+        IconButton(imageName: value, color: MockDataDashBoard.colors[index], destination: MockDataDashBoard.destinationNames[index])
     }
 
     let dashComponent: [DashComponent] = [

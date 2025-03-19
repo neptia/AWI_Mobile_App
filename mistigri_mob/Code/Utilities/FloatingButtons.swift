@@ -15,12 +15,6 @@ struct FloatingButtonView: View {
                 NavigationLink(destination: ScreenIconsAndText()) {
                     Text("IconsAndText")
                 }
-                NavigationLink(destination: ScreenStraight()) {
-                    Text("Straight")
-                }
-                NavigationLink(destination: ScreenCircle()) {
-                    Text("Circle")
-                }
             }
         }
     }
@@ -64,80 +58,6 @@ struct ScreenIconsAndText: View {
     }
 }
 
-struct ScreenStraight: View {
-    
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    var body: some View {
-        let mainButton1 = MainButton(imageName: "thermometer", colorHex: "f7b731")
-        let mainButton2 = MainButton(imageName: "cloud.fill", colorHex: "eb3b5a")
-        let buttonsImage = MockData.iconImageNames.enumerated().map { index, value in
-            IconButton(imageName: value, color: MockData.colors[index])
-        }
-        
-        let menu1 = FloatingButton(mainButtonView: mainButton1, buttons: buttonsImage)
-            .straight()
-            .direction(.right)
-            .delays(delayDelta: 0.1)
-        
-        let menu2 = FloatingButton(mainButtonView: mainButton2, buttons: buttonsImage)
-            .straight()
-            .direction(.top)
-            .delays(delayDelta: 0.1)
-        
-        return VStack {
-            Spacer()
-            HStack {
-                menu1
-                Spacer()
-                menu2
-            }
-            .padding(20)
-        }
-    }
-}
-
-struct ScreenCircle: View {
-    
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    var body: some View {
-        let mainButton1 = MainButton(imageName: "message.fill", colorHex: "f7b731")
-        let mainButton2 = MainButton(imageName: "umbrella.fill", colorHex: "eb3b5a")
-        let mainButton3 = MainButton(imageName: "message.fill", colorHex: "f7b731")
-        let buttonsImage = MockData.iconImageNames.enumerated().map { index, value in
-            IconButton(imageName: value, color: MockData.colors[index])
-        }
-        
-        let menu1 = FloatingButton(mainButtonView: mainButton2, buttons: buttonsImage.dropLast())
-            .circle()
-            .startAngle(3/2 * .pi)
-            .endAngle(2 * .pi)
-            .radius(70)
-        let menu2 = FloatingButton(mainButtonView: mainButton1, buttons: buttonsImage)
-            .circle()
-            .delays(delayDelta: 0.1)
-        let menu3 = FloatingButton(mainButtonView: mainButton3, buttons: buttonsImage.dropLast())
-            .circle()
-            .layoutDirection(.counterClockwise)
-            .startAngle(3/2 * .pi)
-            .endAngle(2 * .pi)
-            .radius(70)
-        
-        return VStack {
-            Spacer()
-            HStack {
-                menu1
-                Spacer()
-                menu2
-                Spacer()
-                menu3
-            }
-            .padding(20)
-        }
-    }
-}
-
 struct MainButton: View {
     
     var imageName: String
@@ -162,16 +82,19 @@ struct IconButton: View {
     var color: Color
     let imageWidth: CGFloat = 20
     let buttonWidth: CGFloat = 45
-    
+    var destination: AnyView
+
     var body: some View {
-        ZStack {
-            color
-            Image(systemName: imageName)
-                .frame(width: imageWidth, height: imageWidth)
-                .foregroundColor(.white)
+        NavigationLink(destination: destination) {
+            ZStack {
+                color
+                Image(systemName: imageName)
+                    .frame(width: imageWidth, height: imageWidth)
+                    .foregroundColor(.white)
+            }
+            .frame(width: buttonWidth, height: buttonWidth)
+            .cornerRadius(buttonWidth / 2)
         }
-        .frame(width: buttonWidth, height: buttonWidth)
-        .cornerRadius(buttonWidth / 2)
     }
 }
 

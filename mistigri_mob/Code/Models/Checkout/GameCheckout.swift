@@ -13,6 +13,8 @@ struct GameCheckout: Identifiable, Equatable {
     var state: String
     var comment: String?
     var price: Double
+    var game_id: String
+    var barcode_id: String
 
     static func == (lhs: GameCheckout, rhs: GameCheckout) -> Bool {
         return lhs.id == rhs.id

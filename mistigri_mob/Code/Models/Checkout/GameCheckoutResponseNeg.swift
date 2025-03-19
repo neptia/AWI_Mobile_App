@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct GameCheckoutResponse: Decodable {
-    var results: [GameCheckoutRepsonseData]
+struct GameCheckoutResponseNegative: Decodable {
+    var results: [GameCheckoutRepsonseDataNegative]
 }
 
-struct GameCheckoutRepsonseData: Decodable {
+struct GameCheckoutRepsonseDataNegative: Decodable {
     var success: Bool
     var message: String
 }

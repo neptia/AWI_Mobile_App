@@ -9,7 +9,7 @@ import Foundation
 
 struct CheckoutAction {
     var parameters: GameCheckoutRequest
-    func call(onSuccess: @escaping (GameCheckoutResponse) -> Void, onError: @escaping (String) -> Void) {
+    func call(onSuccess: @escaping (GameCheckoutResponsePositive) -> Void, onPartialSuccess: @escaping (GameCheckoutResponseNegative) -> Void, onError: @escaping (String) -> Void) {
         let path: String = "/purchases"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
@@ -40,32 +40,32 @@ struct CheckoutAction {
                 return
             }
             print("Status Code: \(httpResponse.statusCode)")
-            guard (200...299).contains(httpResponse.statusCode) else {
-                print("Server error: \(httpResponse.statusCode)")
-                onError("Server error: \(httpResponse.statusCode)")
+
+            guard let data = data else {
+                if let error = error {
+                    print("Error: \(error.localizedDescription)")
+                    onError("Network error. Please try again.")
+                }
                 return
             }
 
-            if let data = data {
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    print("Raw JSON Response: \(jsonString)")
-                }
-                let response = try? JSONDecoder().decode(GameCheckoutResponse.self, from: data)
-                if let response = response {
+            if (200...299).contains(httpResponse.statusCode) {
+                // Try decoding as GameCheckoutResponsePositive
+                if let response = try? JSONDecoder().decode(GameCheckoutResponsePositive.self, from: data) {
                     print("Successfully purchased games")
                     onSuccess(response)
+                }
+                // If decoding fails, try as GameCheckoutResponseNegative
+                else if let errorResponse = try? JSONDecoder().decode(GameCheckoutResponseNegative.self, from: data) {
+                    print("Partial success or failure in purchases")
+                    onPartialSuccess(errorResponse)
                 } else {
-                    // Error: Unable to decode response JSON
-                    print("Unable to decode response JSON")
-                    onError("Unknown error. Please try again later.")
-                    return
+                    print("Unknown response format")
+                    onError("Unexpected server response")
                 }
             } else {
-                // Error: API request failed
-                if let error = error {
-                    print("Error: \(error.localizedDescription)")
-                    onError("Unknown error. Please try again later.")
-                }
+                print("Server error: \(httpResponse.statusCode)")
+                onError("Server error: \(httpResponse.statusCode)")
             }
         }
         task.resume()
