@@ -91,6 +91,10 @@ class GameViewModel: ObservableObject {
         })
     }
 
+    func getMinimumGame() -> GamePricesResponseData? {
+        return gamePrices.min(by: { $0.unitPrice < $1.unitPrice })
+    }
+
     // Fetch all barcodes
     func fetchAllBarcodes(completion: @escaping () -> Void) {
         let fetchAction = FetchAllBarcodesAction()
@@ -111,6 +115,17 @@ class GameViewModel: ObservableObject {
             return []
         } else {
             return barcodes.filter { $0.barcode_id.localizedCaseInsensitiveContains(searchText) }
+        }
+    }
+
+    //Get game title from ID
+    func getGameTitleFromID(id: String, completion: @escaping (String) -> Void) {
+        fetchAllGames {
+            if let game = self.games.first(where: { $0.id == id }) {
+                completion(game.name)
+            } else {
+                completion("")
+            }
         }
     }
 

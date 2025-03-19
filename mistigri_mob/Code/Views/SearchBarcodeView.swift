@@ -12,6 +12,7 @@ struct SearchBarcodeView: View {
     @State private var searchText = ""
     @State private var showSuggestion = false
     @ObservedObject var checkoutVM: CheckoutViewModel = CheckoutViewModel()
+    @FocusState private var isTextFieldFocused: Bool
 
     init(checkoutVM: CheckoutViewModel = CheckoutViewModel()) {
         self.checkoutVM = checkoutVM
@@ -26,11 +27,13 @@ struct SearchBarcodeView: View {
                 .padding()
                 .background(Color(.systemGray6))
                 .cornerRadius(8)
+                .focused($isTextFieldFocused)
                 .onSubmit {
                     if let firstBarcode = viewModel.filteredBarcodes(searchText: searchText).first {
                         searchText = firstBarcode.barcode_id
                         showSuggestion = false
                         checkoutVM.selectedBarcode = firstBarcode
+                        isTextFieldFocused = false
                     }
                 }
 
@@ -47,6 +50,8 @@ struct SearchBarcodeView: View {
                 Button("\(NSLocalizedString("Suggestion.Text.Title", comment: "")): \(firstBarcode.barcode_id)") {
                     searchText = firstBarcode.barcode_id
                     showSuggestion = false
+                    checkoutVM.selectedBarcode = firstBarcode
+                    isTextFieldFocused = false
                 }
             }
         }
@@ -58,7 +63,7 @@ struct SearchBarcodeView: View {
 
     private func clearSearch() {
         searchText = ""
-        showSuggestion = false
+        isTextFieldFocused = false
     }
 
 }

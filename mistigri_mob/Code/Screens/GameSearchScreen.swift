@@ -15,22 +15,24 @@ struct GameSearchScreen: View {
         NavigationStack {
             // List displaying the filtered games
             List(viewModel.filteredGames(searchText: searchText), id: \.id) { game in
-                NavigationLink(destination: GameDetailScreen(game: game, viewModel: viewModel).navigationBarBackButtonHidden(true)) {
+                NavigationLink(destination: GameDetailScreen(
+                    gameInfo: game,
+                    viewModel: viewModel
+                ).navigationBarBackButtonHidden(true)) {
                     Text(game.name)
                 }.listRowBackground(Color.CFFF8F7)
 
-            }.scrollContentBackground(.hidden)
+            }.scrollContentBackground(.hidden) 
                 .background(Color.CFFF3E2)
 
                 .searchable(text: $searchText, prompt: "Search for a game...")
             // Search suggestions based on the search text
                 .onAppear {
                     // Fetch games when the view appears
-                    viewModel.fetchAllGames {
+                    viewModel.fetchNewGames{
                         // Handle post-fetch actions if needed
                     }
                 }
-
         }
     }
 }

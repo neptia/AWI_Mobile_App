@@ -25,15 +25,27 @@ struct DepositAction {
             request.httpBody = try JSONEncoder().encode(parameters)
             let jsonData = try JSONEncoder().encode(parameters)
             if let jsonString = String(data: jsonData, encoding: .utf8) {
-                    print("------------ JSON Sent to Server:\n\(jsonString)")
-                }
+                print("------------ JSON Sent to Server:\n\(jsonString)")
+            }
         } catch {
             // Error: Unable to encode request parameters
             print("Unable to encode request parameters")
             onError("Unknown error. Please try again later.")
             return
         }
-        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+        let task = URLSession.shared.dataTask(with: request) { data, testResponse, error in
+            guard let httpResponse = testResponse as? HTTPURLResponse else {
+                print("Invalid response from server")
+                onError("Invalid response from server")
+                return
+            }
+            print("Status Code: \(httpResponse.statusCode)")
+            guard (200...299).contains(httpResponse.statusCode) else {
+                print("Server error: \(httpResponse.statusCode)")
+                onError("Server error: \(httpResponse.statusCode)")
+                return
+            }
+
             if let data = data {
                 if let jsonString = String(data: data, encoding: .utf8) {
                     print("Raw JSON Response: \(jsonString)")

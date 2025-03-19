@@ -84,11 +84,12 @@ struct DashboardScreen: View {
                 .navigationDestination(for: DashComponent.self) { component in
                     switch component.name {
                     case "Home.Text.Title".localized:
-                        DashHomeScreen()
+                        DashHomeScreen().navigationTitle("Dashboard.Text.Title".localized)
                     case "Deposit.Text.Title".localized:
-                        DepositScreen().environmentObject(alertManager)
+                        DepositScreen().environmentObject(alertManager).navigationTitle("Deposit.Text.Title".localized)
                     case "Checkout.Text.Title".localized:
-                        CheckoutScreen()
+                        CheckoutScreen().environmentObject(alertManager)
+                            .navigationTitle("Checkout.Text.Title".localized)
                     case "FStatement.Text.Title".localized:
                         Test()
                     case "Stocks.Text.Title".localized:
@@ -98,6 +99,8 @@ struct DashboardScreen: View {
                     case "Sessions.Text.Title".localized:
                         Test()
                     case "Recovery.Text.Title".localized:
+                        Test()
+                    case "Fees.Text.Title".localized:
                         Test()
                     default:
                         Test()

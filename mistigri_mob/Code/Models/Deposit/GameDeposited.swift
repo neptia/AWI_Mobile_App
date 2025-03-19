@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameDeposited: Identifiable, Equatable {
     var id = UUID()
+    var game_id: String
     var title: String
     var state: String
     var comment: String?

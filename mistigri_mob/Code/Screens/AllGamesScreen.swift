@@ -67,7 +67,7 @@ struct AllGamesScreen: View {
                                         .padding(.horizontal, 12)
                                         .multilineTextAlignment(.leading)
                                         .lineLimit(1)
-                                    Text(String(game.minUnitPrice ?? 0.0))
+                                    Text("$ "+String(game.minUnitPrice ?? 0.0))
                                         .font(.system(size: 16, weight: .heavy))
                                         .padding(.horizontal, 12)
                                         .padding(.bottom, 3)

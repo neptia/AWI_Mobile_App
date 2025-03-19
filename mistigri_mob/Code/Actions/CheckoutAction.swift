@@ -1,16 +1,16 @@
 //
-//  LoginAction.swift
+//  CheckoutAction.swift
 //  mistigri_mob
 //
-//  Created by Poomedy Rungen on 08/03/2025.
+//  Created by Poomedy Rungen on 19/03/2025.
 //
 
 import Foundation
 
-struct LoginAction {
-    var parameters: LoginRequest
-    func call(onSuccess: @escaping (LoginResponse) -> Void, onError: @escaping (String) -> Void) {
-        let path: String = "/user/login"
+struct CheckoutAction {
+    var parameters: GameCheckoutRequest
+    func call(onSuccess: @escaping (GameCheckoutResponse) -> Void, onError: @escaping (String) -> Void) {
+        let path: String = "/purchases"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             print("Invalid Url")
@@ -23,6 +23,10 @@ struct LoginAction {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         do {
             request.httpBody = try JSONEncoder().encode(parameters)
+            let jsonData = try JSONEncoder().encode(parameters)
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                print("------------ JSON Sent to Server:\n\(jsonString)")
+            }
         } catch {
             // Error: Unable to encode request parameters
             print("Unable to encode request parameters")
@@ -46,14 +50,14 @@ struct LoginAction {
                 if let jsonString = String(data: data, encoding: .utf8) {
                     print("Raw JSON Response: \(jsonString)")
                 }
-                let response = try? JSONDecoder().decode(LoginResponse.self, from: data)
+                let response = try? JSONDecoder().decode(GameCheckoutResponse.self, from: data)
                 if let response = response {
-                    print("Logged in successfully")
+                    print("Successfully purchased games")
                     onSuccess(response)
                 } else {
                     // Error: Unable to decode response JSON
                     print("Unable to decode response JSON")
-                    onError("Invalid credentials. Please try again.")
+                    onError("Unknown error. Please try again later.")
                     return
                 }
             } else {
@@ -67,3 +71,4 @@ struct LoginAction {
         task.resume()
     }
 }
+

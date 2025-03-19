@@ -18,7 +18,7 @@ class DepositViewModel: ObservableObject {
         if input.isValid {
             displayGamesAdded.append(input)
         } else {
-            alertManager.showAlertMessage(message: "Fields cannot be empty")
+            alertManager.showAlertMessage(message: "Empty.Text.Title".localized)
         }
     }
 
@@ -38,7 +38,7 @@ class DepositViewModel: ObservableObject {
                     unitPrice: displayGamesAdded[i].price,
                     comment: displayGamesAdded[i].comment ?? "",
                     state: displayGamesAdded[i].state,
-                    game_id: displayGamesAdded[i].id.uuidString,
+                    game_id: displayGamesAdded[i].game_id,
                     barcode_id: UUID().uuidString
                 )
                 gamesAdded.append(game)
@@ -51,7 +51,7 @@ class DepositViewModel: ObservableObject {
 
         DepositAction(parameters: GameDepositRequest(barcodes: gamesAdded, seller_id: selectedSeller.id))
             .call(onSuccess: { response in
-                alertManager.showAlertMessage(message: "Stock added successfully")
+                alertManager.showAlertMessage(message: response.message)
             }, onError: { errorMessage in
                 alertManager.showAlertMessage(message: "Stock deposit failed")
             })

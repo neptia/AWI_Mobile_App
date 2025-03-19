@@ -24,7 +24,7 @@ struct GameDetailView: View {
                     .foregroundColor(Color.gray)
                 HStack(alignment: .lastTextBaseline, spacing: 30) {
                     if let price = game.minUnitPrice {
-                        Text(String(format: "%.2f", price))
+                        Text("$ "+String(format: "%.2f", price))
                             .fontWeight(.bold)
                             .padding(.top, 20)
                             .foregroundColor(Color.Ce07800)

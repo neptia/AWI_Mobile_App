@@ -10,7 +10,7 @@ import Foundation
 struct FetchSameGamePricesAction {
     var parameters: GamePricesRequest
     func call(onSuccess: @escaping ([GamePricesResponseData]) -> Void, onError: @escaping (String) -> Void) {
-        let path: String = "games/price"
+        let path: String = "/games/price"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             return
@@ -27,7 +27,11 @@ struct FetchSameGamePricesAction {
             return
         }
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            
             if let data = data {
+                if let jsonString = String(data: data, encoding: .utf8) {
+                    print("Raw JSON Response: \(jsonString)")
+                }
                 let response = try? JSONDecoder().decode(GamePricesResponse.self, from: data)
                 if let response = response {
                     onSuccess(response.unitPrices)

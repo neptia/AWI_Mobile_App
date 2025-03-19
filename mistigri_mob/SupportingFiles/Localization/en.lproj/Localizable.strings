@@ -49,3 +49,6 @@
 "Sessions.Text.Title"="Sessions";
 "Recovery.Text.Title"="Recovery";
 "Fees.Text.Title"="Configure Fees";
+"NoInfo.Text.Title"="No information available";
+"Options.Text.Title"="Options";
+"Empty.Text.Title"="Fields cannot be empty";

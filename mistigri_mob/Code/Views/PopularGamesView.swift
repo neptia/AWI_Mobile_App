@@ -49,6 +49,9 @@ struct PopularGamesView: View {
                                 .font(.body)
                                 .padding(.top, 0)
                                 .cornerRadius(10)
+                                .frame(maxWidth: 100)
+                                .lineLimit(1)
+                                .fixedSize()
                         }
                     }
                 }

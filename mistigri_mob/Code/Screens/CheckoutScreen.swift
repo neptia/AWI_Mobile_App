@@ -9,14 +9,15 @@ import SwiftUI
 
 struct CheckoutScreen: View {
     @StateObject var viewModel: CheckoutViewModel = CheckoutViewModel()
+    @EnvironmentObject var alertManager: AlertManager
     @State var customerEmail: String = ""
-
+    
     let columns = [
         GridItem(.flexible(), alignment: .topLeading),
         GridItem(.fixed(30), alignment: .topLeading),
         GridItem(.fixed(30), alignment: .topLeading)
     ]
-
+    
     var body: some View {
         VStack {
             HStack {
@@ -26,12 +27,18 @@ struct CheckoutScreen: View {
                     .cornerRadius(8)
                     .autocapitalization(.none)
             }.padding()
-            SearchBarcodeView()
+            SearchBarcodeView(checkoutVM: viewModel)
             Button(action: {
-                
+                viewModel.addBarcodetoBasket(barcode: viewModel.selectedBarcode.barcode_id, email:customerEmail, alertManager: alertManager)
             }) {
-                Text("Add Barcode to Basket".localized)
+                Text("AddGame.Text.Title".localized)
             }.padding()
+                .alert(isPresented: $alertManager.showAlert) {
+                    Alert(
+                        title: Text("Status.Text.Title".localized),
+                        message: Text(alertManager.alertMessage),
+                        dismissButton: .default(Text("OK")))
+                }
             VStack {
                 Form {
                     Section {
@@ -47,8 +54,13 @@ struct CheckoutScreen: View {
                             // Data Rows
                             ForEach(viewModel.fetchBarcodesAddedtoBasket(), id: \.id) { barcode in
                                 VStack(alignment:.leading) {
-                                    Text(barcode.id.uuidString)
-                                    
+                                    Text(barcode.title)
+                                    Text(barcode.state)
+                                        .foregroundColor(.secondary)
+                                    if barcode.comment != nil {
+                                        Text(barcode.comment!)
+                                            .foregroundColor(.secondary)
+                                    }
                                 }
                                 Text(barcode.priceString)
                                 HStack {
@@ -66,12 +78,10 @@ struct CheckoutScreen: View {
                     }
                 }
             }
-
-
         }
     }
 }
 
 #Preview {
-    CheckoutScreen()
+    CheckoutScreen().environmentObject(AlertManager())
 }

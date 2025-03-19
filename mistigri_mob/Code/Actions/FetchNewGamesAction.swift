@@ -8,7 +8,7 @@ import Foundation
 
 struct FetchNewGamesAction {
     func call(onSuccess: @escaping ([GameResponseData]) -> Void, onError: @escaping (String) -> Void) {
-        let path = "/games/20"
+        let path = "/games/100"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             print("Invalid Url")
