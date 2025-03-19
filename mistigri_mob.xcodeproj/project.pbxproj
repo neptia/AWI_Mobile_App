@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,7 +46,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B0BC814A2D7CE83C00CC12A8 /* Exceptions for "mistigri_mob" folder in "mistigri_mob" target */ = {
+		B0BC814A2D7CE83C00CC12A8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Tests/mistigri_mobTests/mistigri_mobTests.swift,
@@ -55,14 +55,14 @@
 			);
 			target = B059AF7A2D7CA900003930C7 /* mistigri_mob */;
 		};
-		B0BC814B2D7CE83C00CC12A8 /* Exceptions for "mistigri_mob" folder in "mistigri_mobTests" target */ = {
+		B0BC814B2D7CE83C00CC12A8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Tests/mistigri_mobTests/mistigri_mobTests.swift,
 			);
 			target = B059AF8A2D7CA901003930C7 /* mistigri_mobTests */;
 		};
-		B0BC81512D7CE83E00CC12A8 /* Exceptions for "mistigri_mob" folder in "mistigri_mobUITests" target */ = {
+		B0BC81512D7CE83E00CC12A8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Tests/mistigri_mobUITests/mistigri_mobUITests.swift,
@@ -73,16 +73,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B059AF7D2D7CA900003930C7 /* mistigri_mob */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B0BC814A2D7CE83C00CC12A8 /* Exceptions for "mistigri_mob" folder in "mistigri_mob" target */,
-				B0BC814B2D7CE83C00CC12A8 /* Exceptions for "mistigri_mob" folder in "mistigri_mobTests" target */,
-				B0BC81512D7CE83E00CC12A8 /* Exceptions for "mistigri_mob" folder in "mistigri_mobUITests" target */,
-			);
-			path = mistigri_mob;
-			sourceTree = "<group>";
-		};
+		B059AF7D2D7CA900003930C7 /* mistigri_mob */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B0BC814A2D7CE83C00CC12A8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, B0BC814B2D7CE83C00CC12A8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, B0BC81512D7CE83E00CC12A8 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = mistigri_mob; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +237,7 @@
 				};
 			};
 			buildConfigurationList = B059AF762D7CA900003930C7 /* Build configuration list for PBXProject "mistigri_mob" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -258,7 +250,6 @@
 			packageReferences = (
 				B0BC81D32D7DCD2900CC12A8 /* XCRemoteSwiftPackageReference "Coordinators" */,
 			);
-			preferredProjectObjectVersion = 77;
 			productRefGroup = B059AF7C2D7CA900003930C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
