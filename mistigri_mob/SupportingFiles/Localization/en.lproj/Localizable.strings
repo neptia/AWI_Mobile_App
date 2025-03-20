@@ -52,3 +52,11 @@
 "NoInfo.Text.Title"="No information available";
 "Options.Text.Title"="Options";
 "Empty.Text.Title"="Fields cannot be empty";
+"GameName.Text.Title"="Name";
+"GameEditor.Text.Title"="Editor";
+"RegisterGame.Text.Title"="Register Game";
+"SellerName.Text.Title"="Name";
+"SellerEmail.Text.Title"="Email";
+"SellerPhone.Text.Title"="Phone";
+"RegisterSeller.Text.Title"="Register seller";
+"SearchClient.Text.Title"="Client Email";

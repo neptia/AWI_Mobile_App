@@ -15,15 +15,53 @@ struct FloatingButtonView: View {
                 NavigationLink(destination: ScreenIconsAndText()) {
                     Text("IconsAndText")
                 }
+                NavigationLink(destination: ScreenStraight()) {
+                    Text("Straight")
+                }
             }
         }
     }
 }
 
+struct ScreenStraight: View {
+
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+    var body: some View {
+        let destination: AnyView = AnyView(Text("Hello World"))
+        let shape = "star.fill"
+        let mainButton1 = MainButton(imageName: "thermometer", colorHex: "f7b731")
+        let mainButton2 = MainButton(imageName: "cloud.fill", colorHex: "eb3b5a")
+        let buttonsImage = MockData.iconImageNames.enumerated().map { index, value in
+            IconButton(imageName: value, color: MockData.colors[index], destination: destination, shape: shape)
+        }
+
+        let menu1 = FloatingButton(mainButtonView: mainButton1, buttons: buttonsImage)
+            .straight()
+            .direction(.right)
+            .delays(delayDelta: 0.1)
+
+        let menu2 = FloatingButton(mainButtonView: mainButton2, buttons: buttonsImage)
+            .straight()
+            .direction(.top)
+            .delays(delayDelta: 0.1)
+
+        return VStack {
+            Spacer()
+            HStack {
+                menu1
+                Spacer()
+                menu2
+            }
+            .padding(20)
+        }
+    }
+}
+
 struct ScreenIconsAndText: View {
-    
+
     @State var isOpen = false
-    
+
     var body: some View {
         let mainButton1 = MainButton(imageName: "star.fill", colorHex: "f7b731", width: 60)
         let mainButton2 = MainButton(imageName: "heart.fill", colorHex: "eb3b5a", width: 60)
@@ -31,7 +69,7 @@ struct ScreenIconsAndText: View {
             IconAndTextButton(imageName: MockData.iconAndTextImageNames[index], buttonText: value)
                 .onTapGesture { isOpen.toggle() }
         }
-        
+
         let menu1 = FloatingButton(mainButtonView: mainButton1, buttons: textButtons, isOpen: $isOpen)
             .straight()
             .direction(.top)
@@ -39,14 +77,14 @@ struct ScreenIconsAndText: View {
             .spacing(10)
             .initialOffset(x: -1000)
             .animation(.spring())
-        
+
         let menu2 = FloatingButton(mainButtonView: mainButton2, buttons: textButtons)
             .straight()
             .direction(.top)
             .alignment(.right)
             .spacing(10)
             .initialOpacity(0)
-        
+
         return VStack {
             HStack {
                 menu1
@@ -59,11 +97,11 @@ struct ScreenIconsAndText: View {
 }
 
 struct MainButton: View {
-    
+
     var imageName: String
     var colorHex: String
-    var width: CGFloat = 50
-    
+    var width: CGFloat = 70
+
     var body: some View {
         ZStack {
             Color(hex: colorHex)
@@ -77,33 +115,39 @@ struct MainButton: View {
 }
 
 struct IconButton: View {
-    
+
     var imageName: String
     var color: Color
     let imageWidth: CGFloat = 20
-    let buttonWidth: CGFloat = 45
+    let buttonWidth: CGFloat = 60
     var destination: AnyView
+    var shape: String
 
     var body: some View {
         NavigationLink(destination: destination) {
             ZStack {
-                color
+                Image(systemName: shape)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: buttonWidth, height: buttonWidth)
+                    .foregroundColor(color)
                 Image(systemName: imageName)
+                    .resizable()
+                    .scaledToFit()
                     .frame(width: imageWidth, height: imageWidth)
                     .foregroundColor(.white)
             }
             .frame(width: buttonWidth, height: buttonWidth)
-            .cornerRadius(buttonWidth / 2)
         }
     }
 }
 
 struct IconAndTextButton: View {
-    
+
     var imageName: String
     var buttonText: String
     let imageWidth: CGFloat = 22
-    
+
     var body: some View {
         ZStack {
             Color.white
@@ -133,27 +177,27 @@ struct IconAndTextButton: View {
 }
 
 struct MockData {
-    
+
     static let colors = [
         "e84393",
         "0984e3",
         "6c5ce7",
         "00b894"
     ].map { Color(hex: $0) }
-    
+
     static let iconImageNames = [
         "sun.max.fill",
         "cloud.fill",
         "cloud.rain.fill",
         "cloud.snow.fill"
     ]
-    
+
     static let iconAndTextImageNames = [
         "plus.circle.fill",
         "minus.circle.fill",
         "pencil.circle.fill"
     ]
-    
+
     static let iconAndTextTitles = [
         "Add New",
         "Remove",
@@ -162,16 +206,16 @@ struct MockData {
 }
 
 extension Color {
-    
+
     init(hex: String) {
         let scanner = Scanner(string: hex)
         var rgbValue: UInt64 = 0
         scanner.scanHexInt64(&rgbValue)
-        
+
         let r = (rgbValue & 0xff0000) >> 16
         let g = (rgbValue & 0xff00) >> 8
         let b = rgbValue & 0xff
-        
+
         self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff)
     }
 }

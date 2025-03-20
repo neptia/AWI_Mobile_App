@@ -20,8 +20,8 @@ struct DashComponent: Identifiable, Hashable {
 
 struct MockDataDashBoard {
     static let colors = [
-        "e84393",
-        "0984e3"
+        "FFB05C",
+        "FFDC73"
     ].map { Color(hex: $0) }
 
     static let iconImageNames = [
@@ -29,9 +29,14 @@ struct MockDataDashBoard {
         "person.fill.badge.plus"
     ]
 
+    static let iconImageShapes = [
+        "heart.fill",
+        "heart.fill"
+    ]
+
     static let destinationNames: [AnyView] = [
-        AnyView(CreateNewGameScreen()),
-        AnyView(CreateNewGameScreen())
+        AnyView(CreateNewGameScreen().environmentObject(AlertManager())),
+        AnyView(CreateNewSellerScreen().environmentObject(AlertManager()))
     ]
 
 }
@@ -41,14 +46,9 @@ struct DashboardScreen: View {
     @ObservedObject var dashboardVM: DashboardViewModel = DashboardViewModel()
     @State var isOpen = false
 
-    let destinations: [AnyView] = [
-        AnyView(CreateNewGameScreen()),
-        AnyView(CreateNewGameScreen())
-    ]
-
     let mainButton = MainButton(imageName: "plus", colorHex: "ffaedb")
     let buttonsImage = MockDataDashBoard.iconImageNames.enumerated().map { index, value in
-        IconButton(imageName: value, color: MockDataDashBoard.colors[index], destination: MockDataDashBoard.destinationNames[index])
+        IconButton(imageName: value, color: MockDataDashBoard.colors[index], destination: MockDataDashBoard.destinationNames[index], shape: MockDataDashBoard.iconImageShapes[index])
     }
 
     let dashComponent: [DashComponent] = [
@@ -103,7 +103,7 @@ struct DashboardScreen: View {
                         CheckoutScreen().environmentObject(alertManager)
                             .navigationTitle("Checkout.Text.Title".localized)
                     case "FStatement.Text.Title".localized:
-                        Test()
+                        FinanceScreen().navigationTitle("FStatement.Text.Title".localized)
                     case "Stocks.Text.Title".localized:
                         Test()
                     case "AccMGT.Text.Title".localized:
@@ -151,7 +151,7 @@ struct DashboardScreen: View {
                         FloatingButton(mainButtonView: mainButton, buttons: buttonsImage)
                             .straight()
                             .direction(.top)
-                            .alignment(.left)
+                            .alignment(.center)
                             .spacing(10)
                             .animation(.spring())
                             .padding()

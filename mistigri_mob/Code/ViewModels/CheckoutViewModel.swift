@@ -55,7 +55,7 @@ class CheckoutViewModel: ObservableObject {
                 alertManager.showAlertMessage(message: log)
             },
                   onError: { errorMessage in
-                alertManager.showAlertMessage(message: "Stock deposit failed")
+                alertManager.showAlertMessage(message: "Stock checkout failed")
             })
     }
 }

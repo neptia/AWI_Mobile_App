@@ -9,6 +9,6 @@ import SwiftUI
 
 struct GameCreationRequest: Encodable {
     let name: String
-    let editors: String
+    let editor: String
     let tags: [String]
 }

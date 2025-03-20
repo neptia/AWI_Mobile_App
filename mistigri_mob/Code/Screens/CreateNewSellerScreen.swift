@@ -1,16 +1,14 @@
 //
-//  CreateNewGame.swift
+//  CreateNewSeller.swift
 //  mistigri_mob
 //
-//  Created by Poomedy Rungen on 19/03/2025.
+//  Created by Poomedy Rungen on 20/03/2025.
 //
 
 import SwiftUI
 
-struct CreateNewGameScreen: View {
-    @State var tags: [String] = []
-    @State var viewModel = TagsViewModel()
-    @StateObject var gameviewModel = GameViewModel()
+struct CreateNewSellerScreen: View {
+    @StateObject var sellerViewModel = SellerViewModel()
     @EnvironmentObject var alertManager: AlertManager
 
     var body: some View {
@@ -18,23 +16,28 @@ struct CreateNewGameScreen: View {
             .ignoresSafeArea()
             .overlay {
                 VStack {
-                    TextField("GameName.Text.Title".localized, text: $gameviewModel.name)
+                    TextField("SellerName.Text.Title".localized, text: $sellerViewModel.name)
                         .padding()
                         .background(Color.CFFDC9A.opacity(0.35))
                         .cornerRadius(8)
                         .padding(.bottom, 15)
-                    TextField("GameEditor.Text.Title".localized, text: $gameviewModel.editors)
+                    TextField("SellerEmail.Text.Title".localized, text: $sellerViewModel.email)
                         .padding()
                         .background(Color.CFFDC9A.opacity(0.35))
                         .cornerRadius(8)
-                    TagsView(viewModel: viewModel)
+                        .padding(.bottom, 15)
+                    TextField("SellerPhone.Text.Title".localized, text: $sellerViewModel.phone)
+                        .padding()
+                        .background(Color.CFFDC9A.opacity(0.35))
+                        .cornerRadius(8)
+                        .padding(.bottom, 15)
+                    Spacer()
                     Button(
                         action: {
-                            gameviewModel.tags = viewModel.getAllTagsName()
-                            gameviewModel.CreateGame(alertManager: alertManager)
+                            sellerViewModel.CreateSeller(alertManager: alertManager)
                         },
                         label: {
-                            Text("RegisterGame.Text.Title".localized)
+                            Text("RegisterSeller.Text.Title".localized)
                                 .font(.system(size: 20, design: .default))
                                 .frame(maxWidth: .infinity, maxHeight: 60)
                                 .foregroundColor(Color.white)
@@ -49,11 +52,10 @@ struct CreateNewGameScreen: View {
                             dismissButton: .default(Text("OK")))
                     }
                 }.padding()
-            }.navigationTitle("Register new game")
-            .foregroundColor(Color(hex: "693600"))
+            }.navigationTitle("Register new seller")
     }
 }
 
 #Preview {
-    CreateNewGameScreen().environmentObject(AlertManager())
+    CreateNewSellerScreen().environmentObject(AlertManager())
 }
