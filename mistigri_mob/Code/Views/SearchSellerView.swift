@@ -14,6 +14,7 @@ struct SearchSellerView: View {
     @ObservedObject var depositViewModel: DepositViewModel = DepositViewModel()
     @ObservedObject var stockViewModel: StockViewModel = StockViewModel()
     @ObservedObject var recoveryViewModel: RecoveryViewModel = RecoveryViewModel()
+    @ObservedObject var financeViewModel: FinanceViewModel = FinanceViewModel()
     @FocusState private var isTextFieldFocused: Bool
 
     init(depositViewModel: DepositViewModel = DepositViewModel()) {
@@ -27,6 +28,11 @@ struct SearchSellerView: View {
     init(recoveryViewModel: RecoveryViewModel = RecoveryViewModel()) {
         self.recoveryViewModel = recoveryViewModel
     }
+
+    init(financeViewModel: FinanceViewModel = FinanceViewModel()) {
+        self.financeViewModel = financeViewModel
+    }
+
 
     var body: some View {
         VStack (alignment: .leading) {
@@ -45,7 +51,10 @@ struct SearchSellerView: View {
                         depositViewModel.selectedSeller = firstSeller
                         stockViewModel.selectedSeller = firstSeller
                         recoveryViewModel.selectedSeller = firstSeller
+                        financeViewModel.selectedSeller = firstSeller
                         isTextFieldFocused = false
+                        financeViewModel.fetchReceiptsBySeller(alertManager: AlertManager())
+                        financeViewModel.fetchDeposits(alertManager: AlertManager())
                     }
                 }
 
@@ -63,9 +72,13 @@ struct SearchSellerView: View {
                     depositViewModel.selectedSeller = firstSeller
                     stockViewModel.selectedSeller = firstSeller
                     recoveryViewModel.selectedSeller = firstSeller
+                    financeViewModel.selectedSeller = firstSeller
                     searchText = firstSeller.name
                     isTextFieldFocused = false
                     showSuggestion = false
+                    financeViewModel.fetchReceiptsBySeller(alertManager: AlertManager())
+                    financeViewModel.fetchDeposits(alertManager: AlertManager())
+
                 }
             }
         }

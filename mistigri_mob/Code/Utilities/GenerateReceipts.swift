@@ -25,8 +25,7 @@ struct GenerateReceiptsView: View {
     var body: some View {
         VStack {
             Button(action: {
-                if let pdfData = generatePDF(from: financeViewModel.selectableItems) {
-                    print(financeViewModel.selectableItems)
+                if let pdfData = generatePDF(from: financeViewModel.selectedItems) {
                     if let fileURL = savePDF(data: pdfData, fileName: "ItemList") {
                         print("PDF saved at \(fileURL)")
                     }
@@ -45,7 +44,6 @@ struct GenerateReceiptsView: View {
     }
 
     func generatePDF(from items: [SelectableItem]) -> Data? {
-        print("heelo")
         let pageWidth: CGFloat = 612
         let pageHeight: CGFloat = 792
         let margin: CGFloat = 50

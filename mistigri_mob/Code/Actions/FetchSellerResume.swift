@@ -38,7 +38,7 @@ struct FetchSellerResume {
             print("Status Code: \(httpResponse.statusCode)")
             if let data = data {
                 if let jsonString = String(data: data, encoding: .utf8) {
-                    print("Raw JSON Response: \(jsonString)")
+//                    print("Raw JSON Response: \(jsonString)")
                 }
                 let response = try? JSONDecoder().decode(getResumeResponse.self, from: data)
                 if let response = response {

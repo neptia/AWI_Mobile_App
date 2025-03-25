@@ -14,7 +14,7 @@ struct FinanceScreen: View {
         VStack(alignment: .leading) {
             SlidingTabBar(
                 selection: $selection,
-                tabs: ["Client", "Seller", "Festival"]
+                tabs: ["Client", "Seller"]
             )
             TabView(selection: $selection) {
                 HStack {
@@ -23,18 +23,9 @@ struct FinanceScreen: View {
                 .tag(0)
 
                 HStack {
-                    Spacer()
-                    Text("Second View")
-                    Spacer()
+                    SellerFinanceView()
                 }
                 .tag(1)
-
-                HStack {
-                    Spacer()
-                    Text("Third View")
-                    Spacer()
-                }
-                .tag(2)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             .animation(.default, value: selection)

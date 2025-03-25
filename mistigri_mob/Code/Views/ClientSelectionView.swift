@@ -24,7 +24,7 @@ struct ClientSelectionView: View {
                     if isAllSelected {
                         financeViewModel.selectedItems.removeAll()
                     } else {
-                        financeViewModel.selectedItems = Set(financeViewModel.selectableItems.map { $0.id.uuidString })
+                        financeViewModel.selectedItems = financeViewModel.selectableItems
                     }
                     isAllSelected.toggle()
                 }) {
@@ -44,7 +44,7 @@ struct ClientSelectionView: View {
     }
 }
 
-struct SelectableItem: Identifiable {
+struct SelectableItem: Identifiable, Codable {
     let id = UUID()
     let header: String
     let title: [String]
@@ -54,10 +54,10 @@ struct SelectableItem: Identifiable {
 
 struct SelectionCell: View {
     let item: SelectableItem
-    @Binding var selectedItems: Set<String>
+    @Binding var selectedItems: [SelectableItem]
 
     var isSelected: Bool {
-        selectedItems.contains(item.id.uuidString)
+        selectedItems.contains(where: { $0.id == item.id })
     }
 
     var body: some View {
@@ -68,15 +68,13 @@ struct SelectionCell: View {
 
             HStack {
                 VStack(alignment: .leading) {
-
-                    ForEach (item.title, id: \.self) { title in
+                    ForEach(item.title, id: \.self) { title in
                         Text(title)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                     }
                     Text(item.subtitle)
                         .font(.headline)
-
                 }
                 Spacer()
                 Text(item.amount)
@@ -88,15 +86,18 @@ struct SelectionCell: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 if isSelected {
-                    selectedItems.remove(item.title.first!)
+                    selectedItems.removeAll { $0.id == item.id }
                 } else {
-                    selectedItems.insert(item.title.first!)
+                    selectedItems.append(item)
                 }
+                print("Selected Items: \(selectedItems.map { $0.id })") 
             }
         }
         .padding(.vertical, 5)
     }
 }
+
+
 
 #Preview {
     ClientSelectionView(financeViewModel: FinanceViewModel())
