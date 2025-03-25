@@ -8,5 +8,5 @@
 import SwiftUI
 
 struct ClientReceiptsRequest: Encodable {
-    var email: String
+    var buyerMail: String
 }

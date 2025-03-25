@@ -10,7 +10,13 @@ import SwiftUI
 class FinanceViewModel: ObservableObject {
     @Published var clients: [ClientResponseData] = []
     @Published var selectedClient: ClientResponseData = ClientResponseData(buyerMail: "")
-    @Published var clientReceipts: [ClientReceiptsResponseData] = []
+    @Published var clientReceipts: [TransactionBuyer] = [] {
+        didSet {
+            updateSelectableItems()
+        }
+    }
+    @Published var selectableItems: [SelectableItem] = []
+    @Published var selectedItems: Set<String> = []
 
     // Fetch all clients
     func fetchAllClients(completion: @escaping () -> Void) {
@@ -39,24 +45,28 @@ class FinanceViewModel: ObservableObject {
         print("===\(selectedClient.buyerMail)")
         FetchClientReceiptsAction(
             parameters: ClientReceiptsRequest(
-                email: selectedClient.buyerMail
+                buyerMail: selectedClient.buyerMail
             )
         ).call(onSuccess: { response in
-            self.clientReceipts = response
+            DispatchQueue.main.async {
+                self.clientReceipts = response
+            }
         }, onError: { errorMessage in
             alertManager.showAlertMessage(message: errorMessage)
         })
     }
 
-    func convertReceiptsToSelectableItems() -> [SelectableItem] {
-        return self.clientReceipts.map { purchase in
-            SelectableItem(
-                header: purchase.barcode_id,
-                title: purchase.game.name,
-                subtitle: purchase.buyerMail,
-                amount: String(format: "%.2f €", purchase.purchaseFee)
+    private func updateSelectableItems() {
+        selectableItems = clientReceipts.map { receipt in
+            let gameNames = receipt.purchaseList.map { $0.barcode.game.name }
+            return SelectableItem(
+                header: receipt.date,
+                title: gameNames,
+                subtitle: receipt.buyerMail,
+                amount: String(receipt.totalPurchaseFee)
             )
         }
     }
+
 
 }

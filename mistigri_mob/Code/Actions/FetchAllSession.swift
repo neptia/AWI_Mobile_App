@@ -1,15 +1,15 @@
 //
-//  FetchAllClientsAction.swift
+//  FetchAllSession.swift
 //  mistigri_mob
 //
-//  Created by Poomedy Rungen on 20/03/2025.
+//  Created by Poomedy Rungen on 22/03/2025.
 //
 
 import SwiftUI
 
-struct FetchAllClientsAction {
-    func call(onSuccess: @escaping ([ClientResponseData]) -> Void, onError: @escaping (String) -> Void) {
-        let path = "/purchases/allBuyers"
+struct FetchAllSession {
+    func call(onSuccess: @escaping (getSessionsResponse) -> Void, onError: @escaping (String) -> Void) {
+        let path = "/sessions/100"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             print("Invalid Url")
@@ -29,16 +29,18 @@ struct FetchAllClientsAction {
                 return
             }
             do {
-                let decodedData = try JSONDecoder().decode(ClientResponse.self, from: data)
+                let decodedData = try JSONDecoder().decode(getSessionsResponse.self, from: data)
                 // Assigning the data to the array
                 print("Successfully fetched data")
-                onSuccess(decodedData.buyers)
+                onSuccess(decodedData)
             } catch let jsonError {
                 print("Failed to decode json", jsonError)
-                onError("Fail to fetch clients. Please try again later.")
+                onError("Unknown error. Please try again later.")
                 return
             }
         }
         task.resume()
     }
+
 }
+

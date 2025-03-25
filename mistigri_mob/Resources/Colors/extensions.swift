@@ -64,4 +64,9 @@ extension Color {
     static let CD0BCFF = Color(red: 208 / 255, green: 188 / 255, blue: 255 / 255)
     static let CFFDC9A = Color(red: 255 / 255, green: 220 / 255, blue: 154 / 255)
     static let CFFCAE7 = Color(red: 1.0, green: 0.79, blue: 0.91)
+    static let E4D2FB = Color(red: 228/255, green: 210/255, blue: 251/255)
+    static let FFFE8A3 = Color(red: 1.0, green: 0.98, blue: 0.51)
+
+    static let mauve = "E4D2FB"
+    static let customMauve = Color(red: 228/255, green: 210/255, blue: 251/255)
 }

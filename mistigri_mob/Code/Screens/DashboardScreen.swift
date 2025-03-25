@@ -105,15 +105,16 @@ struct DashboardScreen: View {
                     case "FStatement.Text.Title".localized:
                         FinanceScreen().navigationTitle("FStatement.Text.Title".localized)
                     case "Stocks.Text.Title".localized:
-                        Test()
+                        StockScreen().navigationTitle("Stocks.Text.Title".localized)
                     case "AccMGT.Text.Title".localized:
-                        Test()
+                        AccountManagementScreen().navigationTitle("AccMGT.Text.Title".localized)
                     case "Sessions.Text.Title".localized:
-                        Test()
+                        SessionScreen()
+                            .navigationTitle("Sessions.Text.Title".localized)
                     case "Recovery.Text.Title".localized:
-                        Test()
+                        RecoveryScreen().navigationTitle("Recovery.Text.Title".localized)
                     case "Fees.Text.Title".localized:
-                        Test()
+                        ConfigureFeeScreen().navigationTitle("Fees.Text.Title".localized)
                     default:
                         Test()
                     }

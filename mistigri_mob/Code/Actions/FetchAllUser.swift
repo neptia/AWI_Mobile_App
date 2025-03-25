@@ -1,15 +1,15 @@
 //
-//  FetchAllClientsAction.swift
+//  FetchAllUser.swift
 //  mistigri_mob
 //
-//  Created by Poomedy Rungen on 20/03/2025.
+//  Created by Poomedy Rungen on 21/03/2025.
 //
 
 import SwiftUI
 
-struct FetchAllClientsAction {
-    func call(onSuccess: @escaping ([ClientResponseData]) -> Void, onError: @escaping (String) -> Void) {
-        let path = "/purchases/allBuyers"
+struct FetchAllUser {
+    func call(onSuccess: @escaping (GetAllUserResponse) -> Void, onError: @escaping (String) -> Void) {
+        let path = "/users"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             print("Invalid Url")
@@ -22,20 +22,20 @@ struct FetchAllClientsAction {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 print("Error while fetching data:", error)
-                onError("No connection. Please try again later.")
+                onError("No connection. Please try again.")
                 return
             }
             guard let data = data else {
                 return
             }
             do {
-                let decodedData = try JSONDecoder().decode(ClientResponse.self, from: data)
+                let decodedData = try JSONDecoder().decode(GetAllUserResponse.self, from: data)
                 // Assigning the data to the array
                 print("Successfully fetched data")
-                onSuccess(decodedData.buyers)
+                onSuccess(decodedData)
             } catch let jsonError {
                 print("Failed to decode json", jsonError)
-                onError("Fail to fetch clients. Please try again later.")
+                onError("Unknown error. Please try again later.")
                 return
             }
         }

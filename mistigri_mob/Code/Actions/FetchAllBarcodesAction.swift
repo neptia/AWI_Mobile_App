@@ -9,7 +9,7 @@ import Foundation
 
 struct FetchAllBarcodesAction {
     func call(onSuccess: @escaping ([BarcodeResponseData]) -> Void, onError: @escaping (String) -> Void) {
-        let path = "/barcodes"
+        let path = "/barcodes/unsold"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             print("Invalid Url")
@@ -32,7 +32,7 @@ struct FetchAllBarcodesAction {
                 let decodedData = try JSONDecoder().decode(BarcodeResponse.self, from: data)
                 // Assigning the data to the array
                 print("Successfully fetched data")
-                onSuccess(decodedData.barcodes)
+                onSuccess(decodedData.unsoldBarcodes)
             } catch let jsonError {
                 print("Failed to decode json", jsonError)
                 onError("Unknown error. Please try again later.")

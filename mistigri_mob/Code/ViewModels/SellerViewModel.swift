@@ -19,11 +19,13 @@ class SellerViewModel: ObservableObject {
         let fetchAction = FetchAllSellersAction()
         fetchAction.call(onSuccess: { sellers in
             DispatchQueue.main.async {
+                print("helooooooooo")
                 self.sellers = sellers
                 completion()
             }
         }, onError: { error in
             // Handle the error, maybe set a message or alert
+            print("erorrrrrrrrr")
             print(error)
         })
     }

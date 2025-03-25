@@ -1,16 +1,16 @@
 //
-//  FetchClientReceipts.swift
+//  UpdateCommissionFee.swift
 //  mistigri_mob
 //
-//  Created by Poomedy Rungen on 20/03/2025.
+//  Created by Poomedy Rungen on 24/03/2025.
 //
 
 import Foundation
 
-struct FetchClientReceiptsAction {
-    var parameters: ClientReceiptsRequest
-    func call(onSuccess: @escaping ([TransactionBuyer]) -> Void, onError: @escaping (String) -> Void) {
-        let path: String = "/transaction/buyers/getTransactionBuyerByBuyer"
+struct UpdateCommissionFee {
+    var parameters: updateCommissionFeeRequest
+    func call(onSuccess: @escaping (messageResponse) -> Void, onError: @escaping (String) -> Void) {
+        let path: String = "/fees/commission"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             print("Invalid Url")
@@ -18,7 +18,7 @@ struct FetchClientReceiptsAction {
         }
         print(url)
         var request = URLRequest(url: url)
-        request.httpMethod = "post"
+        request.httpMethod = "PUT"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         do {
@@ -36,20 +36,18 @@ struct FetchClientReceiptsAction {
                 return
             }
             print("Status Code: \(httpResponse.statusCode)")
-            guard (200...299).contains(httpResponse.statusCode) else {
-                print("Server error: \(httpResponse.statusCode)")
-                onError("Server error: \(httpResponse.statusCode)")
-                return
-            }
-
             if let data = data {
                 if let jsonString = String(data: data, encoding: .utf8) {
                     print("Raw JSON Response: \(jsonString)")
                 }
-                let response = try? JSONDecoder().decode(ClientReceiptsResponse.self, from: data)
+                let response = try? JSONDecoder().decode(messageResponse.self, from: data)
                 if let response = response {
                     print("Receipts fetch successfully")
-                    onSuccess(response.TransactionBuyers)
+                    if(200...299).contains(httpResponse.statusCode){
+                        onSuccess(response)
+                    } else {
+                        onError(response.message)
+                    }
                 } else {
                     // Error: Unable to decode response JSON
                     print("Unable to decode response JSON")
@@ -63,6 +61,7 @@ struct FetchClientReceiptsAction {
                     onError("Unknown error. Please try again later.")
                 }
             }
+
         }
         task.resume()
     }

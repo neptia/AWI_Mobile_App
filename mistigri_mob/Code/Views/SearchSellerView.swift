@@ -12,10 +12,20 @@ struct SearchSellerView: View {
     @State private var searchText = ""
     @State private var showSuggestion = true
     @ObservedObject var depositViewModel: DepositViewModel = DepositViewModel()
+    @ObservedObject var stockViewModel: StockViewModel = StockViewModel()
+    @ObservedObject var recoveryViewModel: RecoveryViewModel = RecoveryViewModel()
     @FocusState private var isTextFieldFocused: Bool
 
     init(depositViewModel: DepositViewModel = DepositViewModel()) {
         self.depositViewModel = depositViewModel
+    }
+
+    init(stockViewModel: StockViewModel = StockViewModel()) {
+        self.stockViewModel = stockViewModel
+    }
+
+    init(recoveryViewModel: RecoveryViewModel = RecoveryViewModel()) {
+        self.recoveryViewModel = recoveryViewModel
     }
 
     var body: some View {
@@ -33,6 +43,8 @@ struct SearchSellerView: View {
                         searchText = firstSeller.name
                         showSuggestion = false
                         depositViewModel.selectedSeller = firstSeller
+                        stockViewModel.selectedSeller = firstSeller
+                        recoveryViewModel.selectedSeller = firstSeller
                         isTextFieldFocused = false
                     }
                 }
@@ -49,6 +61,8 @@ struct SearchSellerView: View {
             if showSuggestion, let firstSeller = viewModel.filteredSellers(searchText: searchText).first {
                 Button("\(NSLocalizedString("Suggestion.Text.Title", comment: "")): \(firstSeller.name)") {
                     depositViewModel.selectedSeller = firstSeller
+                    stockViewModel.selectedSeller = firstSeller
+                    recoveryViewModel.selectedSeller = firstSeller
                     searchText = firstSeller.name
                     isTextFieldFocused = false
                     showSuggestion = false
@@ -69,5 +83,5 @@ struct SearchSellerView: View {
 
 
 #Preview {
-    SearchSellerView()
+    SearchSellerView(recoveryViewModel: RecoveryViewModel())
 }

@@ -18,6 +18,10 @@ struct FloatingButtonView: View {
                 NavigationLink(destination: ScreenStraight()) {
                     Text("Straight")
                 }
+
+                NavigationLink(destination: ScreenCircle()) {
+                    Text("Circle")
+                }
             }
         }
     }
@@ -57,6 +61,50 @@ struct ScreenStraight: View {
         }
     }
 }
+
+struct ScreenCircle: View {
+
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    var body: some View {
+        let destination: AnyView = AnyView(Text("Hello World"))
+
+        let mainButton1 = MainButton(imageName: "message.fill", colorHex: "f7b731")
+        let mainButton2 = MainButton(imageName: "umbrella.fill", colorHex: "eb3b5a")
+        let mainButton3 = MainButton(imageName: "message.fill", colorHex: "f7b731")
+        let buttonsImage = MockData.iconImageNames.enumerated().map { index, value in
+            IconButton(imageName: value, color: MockData.colors[index], destination: destination, shape: "star.fill")
+        }
+
+        let menu1 = FloatingButton(mainButtonView: mainButton2, buttons: buttonsImage.dropLast())
+            .circle()
+            .startAngle(3/2 * .pi)
+            .endAngle(2 * .pi)
+            .radius(70)
+        let menu2 = FloatingButton(mainButtonView: mainButton1, buttons: buttonsImage)
+            .circle()
+            .delays(delayDelta: 0.1)
+        let menu3 = FloatingButton(mainButtonView: mainButton3, buttons: buttonsImage.dropLast())
+            .circle()
+            .layoutDirection(.counterClockwise)
+            .startAngle(3/2 * .pi)
+            .endAngle(2 * .pi)
+            .radius(70)
+
+        return VStack {
+            Spacer()
+            HStack {
+                menu1
+                Spacer()
+                menu2
+                Spacer()
+                menu3
+            }
+            .padding(20)
+        }
+    }
+}
+
 
 struct ScreenIconsAndText: View {
 

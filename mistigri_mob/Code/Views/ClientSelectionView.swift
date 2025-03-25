@@ -7,9 +7,7 @@
 import SwiftUI
 
 struct ClientSelectionView: View {
-    @State private var selectedItems: Set<String> = []
     @State private var isAllSelected = false
-    @State private var items: [SelectableItem] = []
     @ObservedObject var financeViewModel: FinanceViewModel = FinanceViewModel()
 
     init(financeViewModel: FinanceViewModel) {
@@ -24,9 +22,9 @@ struct ClientSelectionView: View {
                 Spacer()
                 Button(action: {
                     if isAllSelected {
-                        selectedItems.removeAll()
+                        financeViewModel.selectedItems.removeAll()
                     } else {
-                        selectedItems = Set(items.map { $0.title })
+                        financeViewModel.selectedItems = Set(financeViewModel.selectableItems.map { $0.id.uuidString })
                     }
                     isAllSelected.toggle()
                 }) {
@@ -38,20 +36,18 @@ struct ClientSelectionView: View {
                 .padding()
             }
             List {
-                ForEach(items, id: \.title) { item in
-                    SelectionCell(item: item, selectedItems: $selectedItems)
+                ForEach(financeViewModel.selectableItems, id: \.id) { item in
+                    SelectionCell(item: item, selectedItems: $financeViewModel.selectedItems)
                 }
             }
-        }
-        .onAppear {
-            items = financeViewModel.convertReceiptsToSelectableItems()
         }
     }
 }
 
-struct SelectableItem {
+struct SelectableItem: Identifiable {
+    let id = UUID()
     let header: String
-    let title: String
+    let title: [String]
     let subtitle: String
     let amount: String
 }
@@ -61,7 +57,7 @@ struct SelectionCell: View {
     @Binding var selectedItems: Set<String>
 
     var isSelected: Bool {
-        selectedItems.contains(item.title)
+        selectedItems.contains(item.id.uuidString)
     }
 
     var body: some View {
@@ -72,11 +68,15 @@ struct SelectionCell: View {
 
             HStack {
                 VStack(alignment: .leading) {
-                    Text(item.title)
-                        .font(.headline)
+
+                    ForEach (item.title, id: \.self) { title in
+                        Text(title)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
                     Text(item.subtitle)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                        .font(.headline)
+
                 }
                 Spacer()
                 Text(item.amount)
@@ -88,9 +88,9 @@ struct SelectionCell: View {
             .contentShape(Rectangle())
             .onTapGesture {
                 if isSelected {
-                    selectedItems.remove(item.title)
+                    selectedItems.remove(item.title.first!)
                 } else {
-                    selectedItems.insert(item.title)
+                    selectedItems.insert(item.title.first!)
                 }
             }
         }

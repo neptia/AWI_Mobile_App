@@ -1,16 +1,16 @@
 //
-//  FetchClientReceipts.swift
+//  FetchGameStockBySeller.swift
 //  mistigri_mob
 //
-//  Created by Poomedy Rungen on 20/03/2025.
+//  Created by Poomedy Rungen on 21/03/2025.
 //
 
 import Foundation
 
-struct FetchClientReceiptsAction {
-    var parameters: ClientReceiptsRequest
-    func call(onSuccess: @escaping ([TransactionBuyer]) -> Void, onError: @escaping (String) -> Void) {
-        let path: String = "/transaction/buyers/getTransactionBuyerByBuyer"
+struct FetchGameStockBySeller {
+    var parameters: GameStockBySellerRequest
+    func call(onSuccess: @escaping (GameStockBySellerResponse) -> Void, onError: @escaping (String) -> Void) {
+        let path: String = "/stocks/byseller"
         let fullUrlString = baseUrl + path
         guard let url = URL(string: fullUrlString) else {
             print("Invalid Url")
@@ -18,7 +18,7 @@ struct FetchClientReceiptsAction {
         }
         print(url)
         var request = URLRequest(url: url)
-        request.httpMethod = "post"
+        request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         do {
@@ -46,10 +46,10 @@ struct FetchClientReceiptsAction {
                 if let jsonString = String(data: data, encoding: .utf8) {
                     print("Raw JSON Response: \(jsonString)")
                 }
-                let response = try? JSONDecoder().decode(ClientReceiptsResponse.self, from: data)
+                let response = try? JSONDecoder().decode(GameStockBySellerResponse.self, from: data)
                 if let response = response {
                     print("Receipts fetch successfully")
-                    onSuccess(response.TransactionBuyers)
+                    onSuccess(response)
                 } else {
                     // Error: Unable to decode response JSON
                     print("Unable to decode response JSON")

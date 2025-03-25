@@ -6,7 +6,7 @@
 //
 
 struct BarcodeResponse: Decodable {
-    let barcodes: [BarcodeResponseData]
+    let unsoldBarcodes: [BarcodeResponseData]
 }
 
 struct BarcodeResponseData: Decodable {

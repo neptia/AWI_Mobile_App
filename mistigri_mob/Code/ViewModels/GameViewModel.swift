@@ -20,7 +20,7 @@ class GameViewModel: ObservableObject {
     
     // Fetch all games
     func fetchAllGames(completion: @escaping () -> Void) {
-        let fetchAction = FetchAllGamesAction()
+        let fetchAction = FetchAllGamesAction( )
         fetchAction.call(onSuccess: { games in
             DispatchQueue.main.async {
                 self.games = games
