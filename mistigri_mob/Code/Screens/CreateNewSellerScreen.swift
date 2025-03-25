@@ -26,6 +26,7 @@ struct CreateNewSellerScreen: View {
                         .background(Color.CFFDC9A.opacity(0.35))
                         .cornerRadius(8)
                         .padding(.bottom, 15)
+                        .autocapitalization(.none)
                     TextField("SellerPhone.Text.Title".localized, text: $sellerViewModel.phone)
                         .padding()
                         .background(Color.CFFDC9A.opacity(0.35))
@@ -49,10 +50,18 @@ struct CreateNewSellerScreen: View {
                         Alert(
                             title: Text("Status"),
                             message: Text(alertManager.alertMessage),
-                            dismissButton: .default(Text("OK")))
+                            dismissButton: .default(Text("OK"), action: {
+                                resetForm()
+                            })
+                        )
                     }
                 }.padding()
             }.navigationTitle("Register new seller")
+    }
+    private func resetForm() {
+        sellerViewModel.name = ""
+        sellerViewModel.email = ""
+        sellerViewModel.phone = ""
     }
 }
 
