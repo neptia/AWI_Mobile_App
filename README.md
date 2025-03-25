@@ -10,8 +10,7 @@ Le projet **Mistigri** est une application permettant de gérer des transactions
 
 ### Modules et dépendances
 
-- **CocoaPods** : Le projet utilise **CocoaPods** pour gérer les dépendances. Il n'y a pas d'autres modules externes comme Firebase ou Alamofire.
-
+- **CocoaPods** : Le projet utilise **CocoaPods** pour gérer les dépendances.
 ---
 
 # Membres de l'équipe
