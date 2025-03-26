@@ -41,7 +41,8 @@ struct SellerTransactionSelectionView: View {
                 ForEach(transactionItems, id: \.id) { item in
                     SellerSelectionCell(item: item, selectedItems: $financeViewModel.selectedItems)
                 }
-            }
+            }.background(Color.clear) // Supprime le fond par défaut
+                .scrollContentBackground(.hidden)
         }
     }
 }

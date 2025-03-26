@@ -17,6 +17,7 @@ class DepositViewModel: ObservableObject {
     func addGametoBasket(input: GameDeposited, alertManager: AlertManager) {
         if input.isValid {
             displayGamesAdded.append(input)
+            self.objectWillChange.send()
         } else {
             alertManager.showAlertMessage(message: "Empty.Text.Title".localized)
         }
@@ -24,6 +25,11 @@ class DepositViewModel: ObservableObject {
 
     func fetchGamesAddedtoBasket() -> [GameDeposited] {
         return displayGamesAdded
+    }
+
+    func clearBasket() {
+        displayGamesAdded.removeAll()
+        gamesAdded.removeAll()
     }
 
     func removeGameFromBasket(game: GameDeposited) {

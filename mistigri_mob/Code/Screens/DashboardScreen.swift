@@ -52,7 +52,7 @@ struct DashboardScreen: View {
     }
 
     let dashComponent: [DashComponent] = [
-        DashComponent(id: UUID(), name: "Home.Text.Title".localized, image: "Dashhome"),
+//        DashComponent(id: UUID(), name: "Home.Text.Title".localized, image: "Dashhome"),
         DashComponent(id: UUID(), name: "Checkout.Text.Title".localized, image: "Checkout"),
         DashComponent(id: UUID(), name: "Deposit.Text.Title".localized, image: "Deposit"),
         DashComponent(id: UUID(), name: "FStatement.Text.Title".localized, image: "FinancialStatement"),
@@ -95,8 +95,8 @@ struct DashboardScreen: View {
                 }
                 .navigationDestination(for: DashComponent.self) { component in
                     switch component.name {
-                    case "Home.Text.Title".localized:
-                        DashHomeScreen().navigationTitle("Dashboard.Text.Title".localized)
+//                    case "Home.Text.Title".localized:
+//                        DashHomeScreen().navigationTitle("Dashboard.Text.Title".localized)
                     case "Deposit.Text.Title".localized:
                         DepositScreen().environmentObject(alertManager).navigationTitle("Deposit.Text.Title".localized)
                     case "Checkout.Text.Title".localized:

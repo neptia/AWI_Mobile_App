@@ -26,7 +26,8 @@ struct CurrentSessionView: View {
 
                 VStack(spacing: 8) {
                     HStack {
-                        Text("📅 Start Date:")
+                        Image(systemName: "calendar")
+                        Text("Start Date:")
                             .fontWeight(.semibold)
                         Spacer()
                         Text(verbatim: "\(dateComponentsStart.day)/\(dateComponentsStart.month)/\(dateComponentsStart.year)")
@@ -36,7 +37,8 @@ struct CurrentSessionView: View {
                     Divider()
 
                     HStack {
-                        Text("⏳ End Date:")
+                        Image(systemName: "hourglass")
+                        Text("End Date:")
                             .fontWeight(.semibold)
                         Spacer()
                         Text(verbatim: "\(dateComponentsEnd.day)/\(dateComponentsEnd.month)/\(dateComponentsEnd.year)")

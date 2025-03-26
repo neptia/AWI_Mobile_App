@@ -40,6 +40,8 @@ struct ClientSelectionView: View {
                     SelectionCell(item: item, selectedItems: $financeViewModel.selectedItems)
                 }
             }
+            .background(Color.clear) // Supprime le fond par défaut
+            .scrollContentBackground(.hidden)
         }
     }
 }

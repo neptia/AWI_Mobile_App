@@ -172,7 +172,7 @@ extension SlidingTabBar {
         public static let `default` = Style(
             font: .body,
             selectedFont: .body.bold(),
-            activeAccentColor: .blue,
+            activeAccentColor: Color.C693600,
             inactiveAccentColor: .black.opacity(0.4),
             indicatorHeight: 2,
             borderColor: .gray.opacity(0.2),

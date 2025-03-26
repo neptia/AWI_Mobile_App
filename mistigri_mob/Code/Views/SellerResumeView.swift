@@ -8,18 +8,18 @@ struct SellerResumeView: View {
     }
 
     var body: some View {
-        VStack(spacing: 30) {
-            HStack(spacing: 30) {
-                StatCard(title: "Stock available", value: String(viewModel.totalStockQuantity), borderColor: .yellow)
-                StatCard(title: "Game Sold", value: String(viewModel.purchaseNumber), borderColor: .yellow)
+        VStack(spacing: 25) {
+            HStack(spacing: 25) {
+                StatCard(title: "Stock available", value: String(viewModel.totalStockQuantity), borderColor: Color.purple.opacity(0.6))
+                StatCard(title: "Game Sold", value: String(viewModel.purchaseNumber), borderColor: Color.purple.opacity(0.6))
             }
 
-            HStack(spacing: 30) {
-                StatCard(title: "Total Sales", value: String(viewModel.totalUnitPrice), borderColor: .red)
-                StatCard(title: "Deposit Paid", value: String(viewModel.totalDepositFee), borderColor: .red)
+            HStack(spacing: 25) {
+                StatCard(title: "Total Sales", value: String(viewModel.totalUnitPrice), borderColor: Color.orange.opacity(0.6))
+                StatCard(title: "Deposit Paid", value: String(viewModel.totalDepositFee), borderColor: Color.orange.opacity(0.6))
             }
 
-            StatCard(title: "Net Earnings", value: String(viewModel.totalUnitPrice-viewModel.totalDepositFee), borderColor: .red)
+            StatCard(title: "Net Earnings", value: String(viewModel.totalUnitPrice - viewModel.totalDepositFee), borderColor: Color.orange.opacity(0.6))
 
             Button(action: {
                 print("Reset tapped")
@@ -28,16 +28,16 @@ struct SellerResumeView: View {
                     .font(.title2)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(maxWidth: 200)
-                    .background(Color.red)
+                    .frame(maxWidth: 220)
+                    .background(Color.orange.opacity(0.8))
                     .cornerRadius(12)
             }
         }
         .padding()
+        .cornerRadius(15)
     }
 }
 
-// Composant StatCard amélioré (plus grand)
 struct StatCard: View {
     var title: String
     var value: String
@@ -46,24 +46,24 @@ struct StatCard: View {
     var body: some View {
         VStack {
             Text(title)
-                .font(.title2)
+                .font(.title3)
                 .foregroundColor(borderColor)
                 .bold()
 
             Text(value)
-                .font(.system(size: 50, weight: .bold))
+                .font(.system(size: 40, weight: .bold))
                 .foregroundColor(borderColor)
         }
-        .frame(width: 160, height: 140)
-        .overlay(
-            RoundedRectangle(cornerRadius: 15)
-                .stroke(borderColor, lineWidth: 3)
-        )
+        .frame(width: 160, height: 130)
+        .background(Color.purple.opacity(0.04))
+        .cornerRadius(12)
     }
 }
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         SellerResumeView(viewModel: RecoveryViewModel())
+            .preferredColorScheme(.light)
+            .previewLayout(.sizeThatFits)
     }
 }

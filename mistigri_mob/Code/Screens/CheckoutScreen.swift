@@ -82,6 +82,13 @@ struct CheckoutScreen: View {
                                         }
                                     }
                                 }
+                                HStack {
+                                    Text("Total Price:")
+                                    Spacer()
+                                    Text("\(viewModel.totalCommission, specifier: "%.2f") $")
+                                        .fontWeight(.bold)
+                                }
+
                             }.listRowBackground(Color(hex: "ffecec"))
                         }.scrollContentBackground(.hidden)
                             .foregroundColor(Color(hex:"693600"))

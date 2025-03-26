@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct ConfigureFeeView: View {
-
     @ObservedObject var viewModel: ConfigureFeeViewModel
 
     init(viewModel: ConfigureFeeViewModel) {
@@ -18,119 +17,101 @@ struct ConfigureFeeView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("Deposit Fee")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.black)
-                .padding(.leading)
-
-            HStack {
-                TextField("Nombre", value: $viewModel.depositFee, formatter: numberFormatter)
-                    .keyboardType(.decimalPad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 120)
-
-                /*
-                Text(viewModel.depositState == "percentage" ? "%" : "$")
-                    .font(.footnote)
-                    .padding(8)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                 */
-
-                Picker("Type de frais", selection: $viewModel.depositState) {
-                    Text("$").tag("fixed")
-                    Text("%").tag("percentage")
-                }
-                .pickerStyle(MenuPickerStyle())
-                .frame(width: 80)
-            }
-            .padding(.horizontal)
-
-            Button(action: {
-                viewModel.updateDepositFee {}
-            }) {
-                Text("Save")
+            // Deposit Fee Section
+            VStack(alignment: .leading) {
+                Text("Deposit Fee")
+                    .font(.title)
                     .fontWeight(.bold)
-                    .frame(maxWidth: .infinity)
-                    .padding(5)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding(.horizontal)
+                    .foregroundColor(Color.purple.opacity(0.6))
+                    .padding(.leading)
+
+                HStack {
+                    TextField("Amount", value: $viewModel.depositFee, formatter: numberFormatter)
+                        .keyboardType(.decimalPad)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(width: 120)
+                        .padding(.vertical, 5)
+                        .background(Color.white.opacity(0.7))
+                        .cornerRadius(8)
+
+                    Picker("Fee Type", selection: $viewModel.depositState) {
+                        Text("$").tag("fixed")
+                        Text("%").tag("percentage")
+                    }
+                    .pickerStyle(MenuPickerStyle())
+                    .frame(width: 80)
+                    .background(Color.white.opacity(0.7))
+                    .cornerRadius(8)
+                }
+                .padding(.horizontal)
+
+                Button(action: {
+                    viewModel.updateDepositFee {}
+                }) {
+                    Text("Save")
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity)
+                        .padding(10)
+                        .background(Color.purple.opacity(0.6))
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                }
+                .padding(30)
+            }.padding(.top, 40)
+            .background(Color.purple.opacity(0.04))
+                .cornerRadius(15)
+                .padding(5)
+
+
+            // Commission Fee Section
+            VStack(alignment: .leading){
+                Text("Commission Fee")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.orange.opacity(0.8))
+                    .padding(.leading)
+
+
+                HStack {
+                    TextField("Amount", value: $viewModel.commissionFee, formatter: numberFormatter)
+                        .keyboardType(.decimalPad)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(width: 120)
+                        .padding(.vertical, 5)
+                        .background(Color.white.opacity(0.7))
+                        .cornerRadius(8)
+
+                    Picker("Fee Type", selection: $viewModel.commissionState) {
+                        Text("$").tag("fixed")
+                        Text("%").tag("percentage")
+                    }
+                    .pickerStyle(MenuPickerStyle())
+                    .frame(width: 80)
+                    .background(Color.white.opacity(0.7))
+                    .cornerRadius(8)
+                }
+                .padding(.horizontal)
+
+                Button(action: {
+                    viewModel.updateCommissionFee {}
+                }) {
+                    Text("Save")
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity)
+                        .padding(10)
+                        .background(Color.orange.opacity(0.7))
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                }
+                .padding(30)
+            }.padding(.top, 40)
+                .background(Color.purple.opacity(0.04))
+                .cornerRadius(15)
+                .padding(5)
         }
         .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.E4D2FB, lineWidth: 12)
-                .background(Color.white)
-                .cornerRadius(15)
-        )
-        .padding(5)
         .onAppear {
             viewModel.fetchDepositFee() {}
-        }
-        .alert(isPresented: $viewModel.showAlert) { 
-            Alert(
-                title: Text("Mise à jour"),
-                message: Text(viewModel.messageAlert),
-                dismissButton: .default(Text("OK"))
-            )
-        }
-
-        VStack(alignment: .leading, spacing: 20) {
-            Text("Commission Fee")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.black)
-                .padding(.leading)
-
-            HStack {
-                TextField("Nombre", value: $viewModel.commissionFee, formatter: numberFormatter)
-                    .keyboardType(.decimalPad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 120)
-
-                /*
-                Text(viewModel.depositState == "percentage" ? "%" : "$")
-                    .font(.footnote)
-                    .padding(8)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                 */
-
-                Picker("Type de frais", selection: $viewModel.commissionState) {
-                    Text("$").tag("fixed")
-                    Text("%").tag("percentage")
-                }
-                .pickerStyle(MenuPickerStyle())
-                .frame(width: 80)
-            }
-            .padding(.horizontal)
-
-            Button(action: {
-                viewModel.updateCommissionFee {}
-            }) {
-                Text("Save")
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity)
-                    .padding(5)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding(.horizontal)
-        }
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 15)
-                .stroke(Color.FFFE8A3, lineWidth: 12)
-                .background(Color.white)
-                .cornerRadius(15)
-        )
-        .padding(5)
-        .onAppear {
             viewModel.fetchCommissionFee() {}
         }
         .alert(isPresented: $viewModel.showAlert) {
@@ -145,4 +126,6 @@ struct ConfigureFeeView: View {
 
 #Preview {
     ConfigureFeeView(viewModel: ConfigureFeeViewModel())
+        .preferredColorScheme(.light)
+        .previewLayout(.sizeThatFits)
 }

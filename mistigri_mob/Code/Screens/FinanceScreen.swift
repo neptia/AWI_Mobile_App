@@ -11,25 +11,29 @@ struct FinanceScreen: View {
     @State private var selection: Int = 0
 
     var body: some View {
-        VStack(alignment: .leading) {
-            SlidingTabBar(
-                selection: $selection,
-                tabs: ["Client", "Seller"]
-            )
-            TabView(selection: $selection) {
-                HStack {
-                    ClientFinanceView()
-                }
-                .tag(0)
+        Color.CFFF8F7
+            .ignoresSafeArea()
+            .overlay {
+                VStack(alignment: .leading) {
+                    SlidingTabBar(
+                        selection: $selection,
+                        tabs: ["Client", "Seller"]
+                    )
+                    TabView(selection: $selection) {
+                        HStack {
+                            ClientFinanceView()
+                        }
+                        .tag(0)
 
-                HStack {
-                    SellerFinanceView()
-                }
-                .tag(1)
+                        HStack {
+                            SellerFinanceView()
+                        }
+                        .tag(1)
+                    }
+                    .tabViewStyle(.page(indexDisplayMode: .never))
+                    .animation(.default, value: selection)
+                }.navigationTitle("Financial Statement")
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .animation(.default, value: selection)
-        }.navigationTitle("Financial Statement")
     }
 }
 
