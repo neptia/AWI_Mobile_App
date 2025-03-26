@@ -40,7 +40,7 @@ struct GameDetailScreen: View {
 
                         VStack(alignment: .leading) {
                             GameDetailView(game: gameInfo)
-                                .padding(.trailing, 20)
+                                .padding(.trailing, 40)
                             if let selectedGame = selectedGame {
                                 HStack {
                                     Text("\(selectedGame.state)")
