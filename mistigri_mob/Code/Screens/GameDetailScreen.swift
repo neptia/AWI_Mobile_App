@@ -55,13 +55,12 @@ struct GameDetailScreen: View {
                                     .foregroundColor(.gray)
                             }
                         }
-                        SameVendorGamesView()
+                        NewGamesView()
                         Spacer()
                     }
                     .onAppear {
                         fetchPrices()
                     }
-                    .padding(.leading, 20)
                 }
             }
     }

@@ -173,12 +173,13 @@ struct DepositScreen: View {
         state = .new
         comment = ""
         quantity = 1
+        depositFee = 0.0
         viewModel.clearBasket()
     }
 
     // Fonction pour calculer les frais de dépôt
     private func calculateDepositFees() {
-        let totalPrice = viewModel.fetchGamesAddedtoBasket().reduce(0) { $0 + $1.price }
+        let totalPrice = viewModel.fetchGamesAddedtoBasket().reduce(0) { $0 + ($1.price * Double($1.quantity)) }
         print("Total Price sent to API:", totalPrice)
 
         guard let url = URL(string: "http://mistigribackend.cluster-ig4.igpolytech.fr/api/fees/deposit/calculate") else {

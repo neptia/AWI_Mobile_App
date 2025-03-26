@@ -9,10 +9,11 @@ import SwiftUI
 
 struct RecoveryScreen: View {
     @StateObject var viewModel: RecoveryViewModel = RecoveryViewModel()
+    @ObservedObject var alertManager = AlertManager()
 
     var body : some View {
         SearchSellerView(recoveryViewModel: viewModel)
-        SellerResumeView(viewModel: viewModel)
+        SellerResumeView(viewModel: viewModel).environmentObject(alertManager)
         Spacer()
     }
 }

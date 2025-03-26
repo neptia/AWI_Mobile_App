@@ -2,6 +2,8 @@ import SwiftUI
 
 struct SellerResumeView: View {
     @ObservedObject var viewModel: RecoveryViewModel
+    @State private var showAlert: Bool = false
+    @EnvironmentObject var alertManager: AlertManager
 
     init(viewModel: RecoveryViewModel) {
         self.viewModel = viewModel
@@ -22,7 +24,7 @@ struct SellerResumeView: View {
             StatCard(title: "Net Earnings", value: String(viewModel.totalUnitPrice - viewModel.totalDepositFee), borderColor: Color.orange.opacity(0.6))
 
             Button(action: {
-                print("Reset tapped")
+                viewModel.fetchResetSeller(alertManager: alertManager)
             }) {
                 Text("Reset")
                     .font(.title2)
@@ -31,6 +33,11 @@ struct SellerResumeView: View {
                     .frame(maxWidth: 220)
                     .background(Color.orange.opacity(0.8))
                     .cornerRadius(12)
+            }.alert(isPresented: $alertManager.showAlert) {
+                Alert(
+                    title: Text("Status"),
+                    message: Text(alertManager.alertMessage),
+                    dismissButton: .default(Text("OK")))
             }
         }
         .padding()
@@ -63,6 +70,7 @@ struct StatCard: View {
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         SellerResumeView(viewModel: RecoveryViewModel())
+            .environmentObject(AlertManager())
             .preferredColorScheme(.light)
             .previewLayout(.sizeThatFits)
     }

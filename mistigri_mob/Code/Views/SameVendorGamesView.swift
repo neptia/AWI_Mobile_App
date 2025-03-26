@@ -12,7 +12,7 @@ struct SameVendorGamesView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("SameVendor.Text.Title".localized)
+            Text("New.Text.Title".localized)
                 .font(.headline)
                 .foregroundColor(Color.C693600)
             ScrollView(.horizontal, showsIndicators: false) {

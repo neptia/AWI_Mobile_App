@@ -36,4 +36,17 @@ class RecoveryViewModel: ObservableObject {
             print(error)
         })
     }
+
+    func fetchResetSeller(alertManager: AlertManager) {
+        let fetchAction = FetchResetSellerAction(parameters: SellerIdRequest(seller_id: selectedSeller.id))
+        fetchAction.call(onSuccess: { response in
+            DispatchQueue.main.async {
+                alertManager.showAlertMessage(message: response.message)
+
+            }
+        }, onError: { error in
+            alertManager.showAlertMessage(message: error)
+            print(error)
+        })
+    }
 }

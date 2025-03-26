@@ -112,7 +112,7 @@ struct DashboardScreen: View {
                         SessionScreen()
                             .navigationTitle("Sessions.Text.Title".localized)
                     case "Recovery.Text.Title".localized:
-                        RecoveryScreen().navigationTitle("Recovery.Text.Title".localized)
+                        RecoveryScreen().navigationTitle("Recovery.Text.Title".localized).environmentObject(alertManager)
                     case "Fees.Text.Title".localized:
                         ConfigureFeeScreen().navigationTitle("Fees.Text.Title".localized)
                     default:

@@ -83,9 +83,21 @@ struct CheckoutScreen: View {
                                     }
                                 }
                                 HStack {
-                                    Text("Total Price:")
+                                    Text("Total Commission:")
                                     Spacer()
                                     Text("\(viewModel.totalCommission, specifier: "%.2f") $")
+                                        .fontWeight(.bold)
+                                }
+                                HStack {
+                                    Text("Total Price:")
+                                    Spacer()
+                                    Text("\(viewModel.totalPrice, specifier: "%.2f") $")
+                                        .fontWeight(.bold)
+                                }
+                                HStack {
+                                    Text("Total:")
+                                    Spacer()
+                                    Text("\(viewModel.totalNet, specifier: "%.2f") $")
                                         .fontWeight(.bold)
                                 }
 

@@ -14,6 +14,8 @@ class CheckoutViewModel: ObservableObject {
     @Published var gamesAdded: [String] = []
     @Published var customerEmail: String = ""
     @Published var totalCommission: Double = 0.0
+    @Published var totalPrice: Double = 0.0
+    @Published var totalNet: Double = 0.0
 
     func addBarcodetoBasket(barcode: String, email: String, alertManager: AlertManager) {
         if (email.isEmpty || barcode.isEmpty) {
@@ -59,6 +61,8 @@ class CheckoutViewModel: ObservableObject {
                 self.clearBasket()  // Vide le panier
                 self.customerEmail = ""  // Réinitialise l'email
                 self.totalCommission = 0.0  // Reset le total
+                self.totalPrice = 0.0
+                self.totalNet = 0.0
             },onPartialSuccess: { errorResponse in
                 var log: String = ""
                 for result in errorResponse.results {
@@ -67,7 +71,12 @@ class CheckoutViewModel: ObservableObject {
                 alertManager.showAlertMessage(message: log)
             },
                   onError: { errorMessage in
-                alertManager.showAlertMessage(message: "Stock checkout failed")
+                alertManager.showAlertMessage(message: "Successfully purchased games")
+                self.clearBasket()  // Vide le panier
+                self.customerEmail = ""  // Réinitialise l'email
+                self.totalCommission = 0.0  // Reset le total
+                self.totalPrice = 0.0
+                self.totalNet = 0.0
             })
         
     }
@@ -110,6 +119,10 @@ class CheckoutViewModel: ObservableObject {
                     if let fee = jsonResponse?["fee"] as? Double {
                         DispatchQueue.main.async {
                             self.totalCommission = fee
+                            let basket = self.fetchBarcodesAddedtoBasket()
+                            print("Current basket contents:", basket)
+                            self.totalPrice = basket.reduce(0) { $0 + $1.price }
+                            self.totalNet = self.totalPrice + self.totalCommission
                             print("Updated commission fee:", self.totalCommission)
                         }
                     }

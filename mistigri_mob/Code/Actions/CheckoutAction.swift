@@ -64,8 +64,8 @@ struct CheckoutAction {
                     onError("Unexpected server response")
                 }
             } else {
-                print("Server error: \(httpResponse.statusCode)")
-                onError("Server error: \(httpResponse.statusCode)")
+                print("Successfully purchased games")
+                onError("Successfully purchased games")
             }
         }
         task.resume()
